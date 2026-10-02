@@ -6,7 +6,7 @@ import net.minecraft.world.chunk.IChunkProvider;
 import net.minecraft.world.gen.IChunkGenerator;
 import net.minecraftforge.fml.common.IWorldGenerator;
 
-public class GctAllStructureGenerator implements IWorldGenerator {
+public class GctAdditionsStructureGenerator implements IWorldGenerator {
     private final StructureFeature[] structures = {
             new StructureDIM54Portal1(),
             new StructureDIM54Portal2(),
@@ -59,7 +59,7 @@ public class GctAllStructureGenerator implements IWorldGenerator {
         for (StructureFeature structure : structures) {
             structure.generateWorld(random, blockX, blockZ, world, dimensionId, chunkGenerator, chunkProvider);
         }
-        GctAllTreeGenerator.generate(random, blockX, blockZ, world, dimensionId);
-        GctAllOreGenerator.generate(random, blockX, blockZ, world, dimensionId);
+        GctAdditionsTreeGenerator.generate(random, blockX, blockZ, world, dimensionId);
+        GctAdditionsOreGenerator.generate(random, blockX, blockZ, world, dimensionId);
     }
 }

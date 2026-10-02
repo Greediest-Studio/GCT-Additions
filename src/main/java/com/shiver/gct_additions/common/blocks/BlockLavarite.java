@@ -1,6 +1,6 @@
 package com.shiver.gct_additions.common.blocks;
 
-import com.shiver.gct_additions.client.GctAllFluidModels;
+import com.shiver.gct_additions.client.GctAdditionsFluidModels;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.item.Item;
@@ -42,6 +42,6 @@ public class BlockLavarite extends BlockFluidClassic {
 
     @SideOnly(Side.CLIENT)
     public static void registerModels(ModelRegistryEvent event) {
-        GctAllFluidModels.register(block, item, "lavarite");
+        GctAdditionsFluidModels.register(block, item, "lavarite");
     }
 }

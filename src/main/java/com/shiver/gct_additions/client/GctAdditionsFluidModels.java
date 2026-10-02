@@ -12,8 +12,8 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.client.model.ModelLoader;
 
-public final class GctAllFluidModels {
-    private GctAllFluidModels() {
+public final class GctAdditionsFluidModels {
+    private GctAdditionsFluidModels() {
     }
 
     public static void register(Block block, Item item, String registryName) {

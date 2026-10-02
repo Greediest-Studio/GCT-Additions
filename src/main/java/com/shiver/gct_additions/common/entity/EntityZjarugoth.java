@@ -1,6 +1,6 @@
 package com.shiver.gct_additions.common.entity;
 
-import com.shiver.gct_additions.misc.registry.GctAllItems;
+import com.shiver.gct_additions.misc.registry.GctAdditionsItems;
 
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -149,7 +149,7 @@ public final class EntityZjarugoth {
     }
 
     protected Item getDropItem() {
-      return (new ItemStack(GctAllItems.FURTHER_SOUL, 1)).getItem();
+      return (new ItemStack(GctAdditionsItems.FURTHER_SOUL, 1)).getItem();
     }
 
     public SoundEvent getAmbientSound() {

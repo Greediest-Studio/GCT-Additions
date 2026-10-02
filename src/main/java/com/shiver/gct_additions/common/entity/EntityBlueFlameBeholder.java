@@ -1,7 +1,7 @@
 package com.shiver.gct_additions.common.entity;
 
 import com.shiver.gct_additions.common.events.SanityEvents;
-import com.shiver.gct_additions.misc.registry.GctAllItems;
+import com.shiver.gct_additions.misc.registry.GctAdditionsItems;
 
 import net.minecraft.client.model.ModelBase;
 import net.minecraft.client.model.ModelBox;
@@ -78,7 +78,7 @@ public final class EntityBlueFlameBeholder {
     }
 
     protected Item getDropItem() {
-      return (new ItemStack(GctAllItems.WARPED_SOUL, 1)).getItem();
+      return (new ItemStack(GctAdditionsItems.WARPED_SOUL, 1)).getItem();
     }
 
     public SoundEvent getAmbientSound() {

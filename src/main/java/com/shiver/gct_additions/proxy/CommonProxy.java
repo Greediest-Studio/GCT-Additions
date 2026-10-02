@@ -1,6 +1,6 @@
 package com.shiver.gct_additions.proxy;
 
-import com.shiver.gct_additions.misc.registry.GctAllLifecycle;
+import com.shiver.gct_additions.misc.registry.GctAdditionsLifecycle;
 import net.minecraftforge.fluids.FluidRegistry;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
@@ -13,17 +13,17 @@ public class CommonProxy {
     }
 
     public void preInit(FMLPreInitializationEvent event) {
-        GctAllLifecycle.preInit(event);
+        GctAdditionsLifecycle.preInit(event);
     }
 
     public void init(FMLInitializationEvent event) {
-        GctAllLifecycle.init(event);
+        GctAdditionsLifecycle.init(event);
     }
 
     public void postInit(FMLPostInitializationEvent event) {
     }
 
     public void serverLoad(FMLServerStartingEvent event) {
-        GctAllLifecycle.serverLoad(event);
+        GctAdditionsLifecycle.serverLoad(event);
     }
 }

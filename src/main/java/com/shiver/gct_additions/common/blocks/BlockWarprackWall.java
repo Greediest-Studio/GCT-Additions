@@ -2,7 +2,7 @@ package com.shiver.gct_additions.common.blocks;
 
 import net.minecraft.creativetab.CreativeTabs;
 
-import com.shiver.gct_additions.misc.GctAllCreativeTab;
+import com.shiver.gct_additions.misc.GctAdditionsCreativeTab;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockWall;
@@ -27,7 +27,7 @@ import net.minecraftforge.fml.relauncher.SideOnly;
     setResistance(4000.0F);
     setLightLevel(0.0F);
     setLightOpacity(255);
-    setCreativeTab(GctAllCreativeTab.TAB);
+    setCreativeTab(GctAdditionsCreativeTab.TAB);
   }
 
   public void getSubBlocks(CreativeTabs tab, NonNullList<ItemStack> items) {

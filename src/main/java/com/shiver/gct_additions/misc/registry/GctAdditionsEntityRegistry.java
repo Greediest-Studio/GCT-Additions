@@ -28,10 +28,10 @@ import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.fml.common.registry.EntityEntry;
 import net.minecraftforge.fml.common.registry.EntityEntryBuilder;
 
-public final class GctAllEntityRegistry {
+public final class GctAdditionsEntityRegistry {
     private static int nextEntityId = 1;
 
-    private GctAllEntityRegistry() {
+    private GctAdditionsEntityRegistry() {
     }
 
     public static void registerEntities(RegistryEvent.Register<EntityEntry> event) {

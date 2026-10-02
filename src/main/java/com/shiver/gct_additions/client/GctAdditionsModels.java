@@ -7,8 +7,8 @@ import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraftforge.client.model.ModelLoader;
 
-public final class GctAllModels {
-    private GctAllModels() {
+public final class GctAdditionsModels {
+    private GctAdditionsModels() {
     }
 
     public static void item(Item item, String registryName) {

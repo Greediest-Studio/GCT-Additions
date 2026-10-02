@@ -1,6 +1,6 @@
 package com.shiver.gct_additions.common.blocks;
 
-import com.shiver.gct_additions.misc.GctAllCreativeTab;
+import com.shiver.gct_additions.misc.GctAdditionsCreativeTab;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.SoundType;
@@ -18,6 +18,6 @@ public class BlockDawniumOre extends Block {
         setResistance(4000.0F);
         setLightLevel(5.0F / 15.0F);
         setLightOpacity(15);
-        setCreativeTab(GctAllCreativeTab.TAB);
+        setCreativeTab(GctAdditionsCreativeTab.TAB);
     }
 }

@@ -1,6 +1,6 @@
 package com.shiver.gct_additions.common.blocks;
 
-import com.shiver.gct_additions.misc.GctAllCreativeTab;
+import com.shiver.gct_additions.misc.GctAdditionsCreativeTab;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockStairs;
@@ -24,7 +24,7 @@ import net.minecraftforge.fml.relauncher.SideOnly;
     setResistance(3.0F);
     setLightLevel(0.0F);
     setLightOpacity(255);
-    setCreativeTab(GctAllCreativeTab.TAB);
+    setCreativeTab(GctAdditionsCreativeTab.TAB);
   }
 
   @SideOnly(Side.CLIENT)

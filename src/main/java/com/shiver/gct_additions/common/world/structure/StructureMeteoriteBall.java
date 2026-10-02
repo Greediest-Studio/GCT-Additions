@@ -6,7 +6,7 @@ import net.minecraft.world.World;
 
 public class StructureMeteoriteBall extends TemplateStructureFeature {
     public StructureMeteoriteBall() {
-        super(0, 10000, GctAllStructureTemplates.METEORITE_BALL);
+        super(0, 10000, GctAdditionsStructureTemplates.METEORITE_BALL);
     }
 
     @Override

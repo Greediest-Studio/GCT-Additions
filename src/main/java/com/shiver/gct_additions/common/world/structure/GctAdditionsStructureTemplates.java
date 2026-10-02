@@ -1,6 +1,6 @@
 package com.shiver.gct_additions.common.world.structure;
 
-public final class GctAllStructureTemplates {
+public final class GctAdditionsStructureTemplates {
     public static final StructureTemplateId DIM_54_PORTAL_1 = template("54portal_1");
     public static final StructureTemplateId DIM_54_PORTAL_2 = template("54portal_2");
     public static final StructureTemplateId DIM_55_PORTAL_1 = template("55portal_1");
@@ -50,7 +50,7 @@ public final class GctAllStructureTemplates {
     public static final StructureTemplateId VOID_BEDROCK_ROD_4 = template("void_bdr_4");
     public static final StructureTemplateId VOID_BEDROCK_ROD_TREASURE = template("void_bdr_t");
 
-    private GctAllStructureTemplates() {
+    private GctAdditionsStructureTemplates() {
     }
 
     private static StructureTemplateId template(String name) {

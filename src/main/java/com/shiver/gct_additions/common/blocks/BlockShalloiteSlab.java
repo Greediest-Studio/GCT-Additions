@@ -1,6 +1,6 @@
 package com.shiver.gct_additions.common.blocks;
 
-import com.shiver.gct_additions.misc.GctAllCreativeTab;
+import com.shiver.gct_additions.misc.GctAdditionsCreativeTab;
 import java.util.Random;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockSlab;
@@ -35,7 +35,7 @@ public class BlockShalloiteSlab extends BlockSlab {
     this.setResistance(20.0f);
     this.setLightLevel(0.0f);
     this.setLightOpacity(15);
-    this.setCreativeTab(GctAllCreativeTab.TAB);
+    this.setCreativeTab(GctAdditionsCreativeTab.TAB);
     IBlockState state = this.blockState.getBaseState().withProperty((IProperty)VARIANT, (Comparable)Variant.DEFAULT);
     if (!this.isDouble()) {
     state = state.withProperty((IProperty)BlockSlab.HALF, (Comparable)BlockSlab.EnumBlockHalf.BOTTOM);

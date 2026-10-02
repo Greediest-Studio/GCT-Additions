@@ -1,6 +1,6 @@
 package com.shiver.gct_additions.common.blocks;
 
-import com.shiver.gct_additions.misc.GctAllCreativeTab;
+import com.shiver.gct_additions.misc.GctAdditionsCreativeTab;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.SoundType;
@@ -19,6 +19,6 @@ import net.minecraft.item.Item;
     setResistance(4000.0F);
     setLightLevel(1.0F);
     setLightOpacity(255);
-    setCreativeTab(GctAllCreativeTab.TAB);
+    setCreativeTab(GctAdditionsCreativeTab.TAB);
   }
 }

@@ -1,6 +1,6 @@
 package com.shiver.gct_additions.common.entity;
 
-import com.shiver.gct_additions.misc.registry.GctAllItems;
+import com.shiver.gct_additions.misc.registry.GctAdditionsItems;
 
 
 import java.util.ArrayList;
@@ -73,7 +73,7 @@ public final class EntityBnatuz {
         });
     RenderingRegistry.registerEntityRenderingHandler(BnatuzProjectileEntity.class, renderManager -> new RenderSnowball<BnatuzProjectileEntity>(renderManager, null, Minecraft.getMinecraft().getRenderItem()) {
           public ItemStack getStackToRender(EntityBnatuz.BnatuzProjectileEntity entity) {
-            return new ItemStack(GctAllItems.STORM_BNATUZ_DUST);
+            return new ItemStack(GctAdditionsItems.STORM_BNATUZ_DUST);
           }
         });
   }

@@ -2,7 +2,7 @@ package com.shiver.gct_additions.common.events;
 
 import com.shiver.gct_additions.common.entity.EntityAncientShoggoth;
 import com.shiver.gct_additions.common.world.dimension.WorldDarkerRealm;
-import com.shiver.gct_additions.misc.registry.GctAllItems;
+import com.shiver.gct_additions.misc.registry.GctAdditionsItems;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.ItemStack;
@@ -19,7 +19,7 @@ public final class SanityAltarNeighbourBlockChanges {
 
   public static void run(World world, int x, int y, int z) {
     BlockPos altarPos = new BlockPos(x, y, z);
-    if (getStack(world, altarPos, 0).getItem() != GctAllItems.ANCIENT_MUD) {
+    if (getStack(world, altarPos, 0).getItem() != GctAdditionsItems.ANCIENT_MUD) {
       tell(world, altarPos, "祭坛没有被远古污泥填充！");
       return;
     }

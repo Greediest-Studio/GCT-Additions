@@ -9,7 +9,7 @@ import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.fml.common.registry.ForgeRegistries;
 import net.minecraftforge.oredict.OreDictionary;
 
-public final class GctAllOreDictionary {
+public final class GctAdditionsOreDictionary {
     private static final List<Entry> ENTRIES = Arrays.asList(
             entry("oreSanite", "sanite_ore"),
             entry("oreEthaxium", "ethauxium_ore"),
@@ -195,7 +195,7 @@ public final class GctAllOreDictionary {
             entry("stoneOrdered", "order_stone_brick_chiseled")
     );
 
-    private GctAllOreDictionary() {
+    private GctAdditionsOreDictionary() {
     }
 
     public static void register() {

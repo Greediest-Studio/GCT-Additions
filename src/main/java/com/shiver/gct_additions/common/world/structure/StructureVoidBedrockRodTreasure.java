@@ -7,7 +7,7 @@ import net.minecraft.util.math.BlockPos;
 
 public class StructureVoidBedrockRodTreasure extends BlockFilteredSurfaceTemplateStructure {
     public StructureVoidBedrockRodTreasure() {
-        super(WorldTheVoid.DIMID, 10000, GctAllStructureTemplates.VOID_BEDROCK_ROD_TREASURE, Blocks.BEDROCK, BlockPos.ORIGIN.up(),
+        super(WorldTheVoid.DIMID, 10000, GctAdditionsStructureTemplates.VOID_BEDROCK_ROD_TREASURE, Blocks.BEDROCK, BlockPos.ORIGIN.up(),
                 BiomeVoidHill.biome);
     }
 }

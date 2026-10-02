@@ -1,6 +1,6 @@
 package com.shiver.gct_additions.common.items;
 
-import com.shiver.gct_additions.misc.GctAllCreativeTab;
+import com.shiver.gct_additions.misc.GctAdditionsCreativeTab;
 import com.shiver.gct_additions.common.events.WrenchBreak;
 import com.google.common.collect.Multimap;
 import net.minecraft.block.state.IBlockState;
@@ -25,7 +25,7 @@ public class ItemSenterianWrench extends Item {
         setMaxStackSize(1);
         setTranslationKey("senterian_wrench");
         setRegistryName("senterian_wrench");
-        setCreativeTab(GctAllCreativeTab.TAB);
+        setCreativeTab(GctAdditionsCreativeTab.TAB);
     }
 
     @Override

@@ -1,6 +1,6 @@
 package com.shiver.gct_additions.common.blocks;
 
-import com.shiver.gct_additions.misc.GctAllCreativeTab;
+import com.shiver.gct_additions.misc.GctAdditionsCreativeTab;
 
 import com.google.common.base.Predicate;
 import java.util.Random;
@@ -47,6 +47,6 @@ import net.minecraft.world.gen.feature.WorldGenMinable;
     setResistance(6.0F);
     setLightLevel(0.33333334F);
     setLightOpacity(255);
-    setCreativeTab(GctAllCreativeTab.TAB);
+    setCreativeTab(GctAdditionsCreativeTab.TAB);
   }
 }

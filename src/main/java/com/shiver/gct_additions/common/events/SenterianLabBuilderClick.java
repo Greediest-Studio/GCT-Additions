@@ -2,7 +2,7 @@
 package com.shiver.gct_additions.common.events;
 
 import com.shiver.gct_additions.common.world.structure.StructureGenerationHelper;
-import com.shiver.gct_additions.common.world.structure.GctAllStructureTemplates;
+import com.shiver.gct_additions.common.world.structure.GctAdditionsStructureTemplates;
 
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.util.Mirror;
@@ -24,7 +24,7 @@ public final class SenterianLabBuilderClick
                 player.sendMessage(new TextComponentString("黑岩实验室已经生成！可能会造成一定卡顿，请知悉"));
             }
             if (!world.isRemote) {
-                StructureGenerationHelper.placeTemplate(world, GctAllStructureTemplates.SENTERIAN_LAB, new BlockPos(x, y, z), Rotation.NONE, Mirror.NONE);
+                StructureGenerationHelper.placeTemplate(world, GctAdditionsStructureTemplates.SENTERIAN_LAB, new BlockPos(x, y, z), Rotation.NONE, Mirror.NONE);
             }
         }
         else {

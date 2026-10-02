@@ -1,7 +1,7 @@
 package com.shiver.gct_additions.common.blocks;
 
 import net.minecraft.util.BlockRenderLayer;
-import com.shiver.gct_additions.misc.GctAllCreativeTab;
+import com.shiver.gct_additions.misc.GctAdditionsCreativeTab;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.BlockStairs;
@@ -21,7 +21,7 @@ public class BlockRainboquartzStair extends BlockStairs {
     this.setResistance(20.0f);
     this.setLightLevel(0.0f);
     this.setLightOpacity(15);
-    this.setCreativeTab(GctAllCreativeTab.TAB);
+    this.setCreativeTab(GctAdditionsCreativeTab.TAB);
 
     }
 

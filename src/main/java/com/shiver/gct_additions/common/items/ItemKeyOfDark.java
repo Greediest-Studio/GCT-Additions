@@ -1,6 +1,6 @@
 package com.shiver.gct_additions.common.items;
 
-import com.shiver.gct_additions.misc.GctAllCreativeTab;
+import com.shiver.gct_additions.misc.GctAdditionsCreativeTab;
 
 import java.util.List;
 import com.shiver.gct_additions.common.events.KeyOfDarkRightClickedOnBlock;
@@ -22,7 +22,7 @@ public class ItemKeyOfDark extends Item {
       this.maxStackSize = 1;
       setTranslationKey("keyofdark");
       setRegistryName("keyofdark");
-      setCreativeTab(GctAllCreativeTab.TAB);
+      setCreativeTab(GctAdditionsCreativeTab.TAB);
     }
 public void addInformation(ItemStack itemstack, World world, List<String> list, ITooltipFlag flag) {
       super.addInformation(itemstack, world, list, flag);

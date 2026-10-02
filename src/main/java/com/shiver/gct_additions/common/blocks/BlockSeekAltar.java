@@ -1,6 +1,6 @@
 package com.shiver.gct_additions.common.blocks;
 
-import com.shiver.gct_additions.misc.GctAllCreativeTab;
+import com.shiver.gct_additions.misc.GctAdditionsCreativeTab;
 
 import java.util.Random;
 import com.shiver.gct_additions.common.events.SeekAltarOnBlockRightClicked;
@@ -33,7 +33,7 @@ public BlockSeekAltar() {
     setResistance(1.0E7F);
     setLightLevel(0.0F);
     setLightOpacity(255);
-    setCreativeTab(GctAllCreativeTab.TAB);
+    setCreativeTab(GctAdditionsCreativeTab.TAB);
   }
 
   public TileEntity createNewTileEntity(World worldIn, int meta) {

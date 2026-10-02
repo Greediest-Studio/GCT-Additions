@@ -6,7 +6,7 @@ import net.minecraft.world.World;
 
 public class StructureEndWitheriumComet extends AirborneTemplateStructure {
     public StructureEndWitheriumComet() {
-        super(1, 1000, GctAllStructureTemplates.END_WITHERIUM, 16, 50, 0);
+        super(1, 1000, GctAdditionsStructureTemplates.END_WITHERIUM, 16, 50, 0);
     }
 
     @Override

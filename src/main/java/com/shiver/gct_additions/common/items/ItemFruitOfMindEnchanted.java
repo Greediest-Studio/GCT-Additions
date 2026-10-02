@@ -1,7 +1,7 @@
 package com.shiver.gct_additions.common.items;
 
 import com.shiver.gct_additions.Tags;
-import com.shiver.gct_additions.misc.GctAllCreativeTab;
+import com.shiver.gct_additions.misc.GctAdditionsCreativeTab;
 import net.darkhax.gamestages.GameStageHelper;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
@@ -26,7 +26,7 @@ public class ItemFruitOfMindEnchanted extends ItemFood {
       super(4, 0.8F, false);
       setTranslationKey("fruit_of_mind_enchanted");
       setRegistryName(new ResourceLocation(Tags.MOD_ID, "fruit_of_mind_enchanted"));
-      setCreativeTab(GctAllCreativeTab.TAB);
+      setCreativeTab(GctAdditionsCreativeTab.TAB);
       setMaxStackSize(64);
       setAlwaysEdible();
     }

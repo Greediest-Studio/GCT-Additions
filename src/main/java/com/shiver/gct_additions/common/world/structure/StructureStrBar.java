@@ -4,6 +4,6 @@ import com.shiver.gct_additions.common.world.dimension.WorldWarpedRuin;
 
 public class StructureStrBar extends SurfaceTemplateStructure {
     public StructureStrBar() {
-        super(WorldWarpedRuin.DIMID, 30000, GctAllStructureTemplates.BAR);
+        super(WorldWarpedRuin.DIMID, 30000, GctAdditionsStructureTemplates.BAR);
     }
 }

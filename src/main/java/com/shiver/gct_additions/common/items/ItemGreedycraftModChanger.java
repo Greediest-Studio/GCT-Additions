@@ -3,7 +3,7 @@ package com.shiver.gct_additions.common.items;
 
 import java.util.List;
 
-import com.shiver.gct_additions.misc.GctAllCreativeTab;
+import com.shiver.gct_additions.misc.GctAdditionsCreativeTab;
 import com.shiver.gct_additions.common.events.ModeChanger;
 
 import net.minecraft.client.util.ITooltipFlag;
@@ -25,7 +25,7 @@ public class ItemGreedycraftModChanger extends Item {
         this.maxStackSize = 1;
         this.setTranslationKey("greedycraft_mod_changer");
         this.setRegistryName("greedycraft_mod_changer");
-        this.setCreativeTab(GctAllCreativeTab.TAB);
+        this.setCreativeTab(GctAdditionsCreativeTab.TAB);
 
     }
 

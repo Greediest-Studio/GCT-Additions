@@ -11,7 +11,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.util.NonNullList;
 import net.minecraft.util.ResourceLocation;
 
-public final class GctAllCreativeTab {
+public final class GctAdditionsCreativeTab {
     private static final String[] FIRST_ITEMS = {
             "dimdarkerrealm", "warped_ruin", "beside_void", "everheaven", "alfheim", "atlantis", "starland",
             "the_void", "the_nowhere", "orderland",
@@ -38,11 +38,11 @@ public final class GctAllCreativeTab {
         public void displayAllRelevantItems(NonNullList<ItemStack> items) {
             super.displayAllRelevantItems(items);
             items.removeIf(ItemStack::isEmpty);
-            items.sort(GctAllCreativeTab::compareStacks);
+            items.sort(GctAdditionsCreativeTab::compareStacks);
         }
     };
 
-    private GctAllCreativeTab() {
+    private GctAdditionsCreativeTab() {
     }
 
     private static int compareStacks(ItemStack left, ItemStack right) {

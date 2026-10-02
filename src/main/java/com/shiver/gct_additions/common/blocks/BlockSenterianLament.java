@@ -1,6 +1,6 @@
 package com.shiver.gct_additions.common.blocks;
 
-import com.shiver.gct_additions.misc.GctAllCreativeTab;
+import com.shiver.gct_additions.misc.GctAdditionsCreativeTab;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
 import net.minecraft.item.ItemBlock;
@@ -17,7 +17,7 @@ public class BlockSenterianLament extends Block {
     this.setResistance(4000.0f);
     this.setLightLevel(0.0f);
     this.setLightOpacity(15);
-    this.setCreativeTab(GctAllCreativeTab.TAB);
+    this.setCreativeTab(GctAdditionsCreativeTab.TAB);
     this.setBlockUnbreakable();
 
     }

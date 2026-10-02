@@ -4,8 +4,8 @@ import net.minecraft.potion.Potion;
 import net.minecraft.potion.PotionType;
 import net.minecraftforge.event.RegistryEvent;
 
-public final class GctAllPotions {
-    private GctAllPotions() {
+public final class GctAdditionsPotions {
+    private GctAdditionsPotions() {
     }
 
     public static void registerPotions(RegistryEvent.Register<Potion> event) {

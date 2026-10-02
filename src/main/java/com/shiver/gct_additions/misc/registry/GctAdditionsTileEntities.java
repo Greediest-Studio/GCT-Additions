@@ -19,8 +19,8 @@ import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 import com.shiver.gct_additions.Tags;
 
-public final class GctAllTileEntities {
-    private GctAllTileEntities() {
+public final class GctAdditionsTileEntities {
+    private GctAdditionsTileEntities() {
     }
 
     public static void register() {

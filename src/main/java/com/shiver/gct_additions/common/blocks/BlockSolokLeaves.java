@@ -2,7 +2,7 @@ package com.shiver.gct_additions.common.blocks;
 
 import net.minecraft.block.Block;
 
-public class BlockSolokLeaves extends GctAllLeavesBlock {
+public class BlockSolokLeaves extends GctAdditionsLeavesBlock {
   public static final Block block = new BlockSolokLeaves();
 
   public BlockSolokLeaves() {

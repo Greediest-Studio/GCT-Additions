@@ -1,7 +1,7 @@
 
 package com.shiver.gct_additions.common.events;
 
-import com.shiver.gct_additions.misc.registry.GctAllItems;
+import com.shiver.gct_additions.misc.registry.GctAdditionsItems;
 import net.minecraft.util.SoundCategory;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.SoundEvent;
@@ -18,9 +18,9 @@ public final class SenterianLockUnlock
     }
     
     public static void run(Entity entity, World world, int x, int y, int z) {
-        if (((entity instanceof EntityLivingBase) ? ((EntityLivingBase)entity).getHeldItemMainhand() : ItemStack.EMPTY).getItem() == new ItemStack(GctAllItems.SENTERIAN_KEY, 1).getItem()) {
+        if (((entity instanceof EntityLivingBase) ? ((EntityLivingBase)entity).getHeldItemMainhand() : ItemStack.EMPTY).getItem() == new ItemStack(GctAdditionsItems.SENTERIAN_KEY, 1).getItem()) {
             if (entity instanceof EntityPlayer) {
-                ((EntityPlayer)entity).inventory.clearMatchingItems(new ItemStack(GctAllItems.SENTERIAN_KEY, 1).getItem(), -1, 1, (NBTTagCompound)null);
+                ((EntityPlayer)entity).inventory.clearMatchingItems(new ItemStack(GctAdditionsItems.SENTERIAN_KEY, 1).getItem(), -1, 1, (NBTTagCompound)null);
             }
             world.setBlockToAir(new BlockPos(x, y, z));
             world.playSound((EntityPlayer)null, (double)x, (double)y, (double)z, (SoundEvent)SoundEvent.REGISTRY.getObject(new ResourceLocation("block.fence_gate.open")), SoundCategory.NEUTRAL, 1.0f, 1.0f);

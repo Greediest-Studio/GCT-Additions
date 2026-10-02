@@ -3,7 +3,7 @@ package com.shiver.gct_additions.common.items;
 
 import java.util.List;
 
-import com.shiver.gct_additions.misc.GctAllCreativeTab;
+import com.shiver.gct_additions.misc.GctAdditionsCreativeTab;
 import com.shiver.gct_additions.common.events.DoorKeyOrderlandClick;
 
 import net.minecraft.client.util.ITooltipFlag;
@@ -24,7 +24,7 @@ public class ItemDoorKeyOfOrderland extends Item {
         this.maxStackSize = 1;
         this.setTranslationKey("door_key_of_orderland");
         this.setRegistryName("door_key_of_orderland");
-        this.setCreativeTab(GctAllCreativeTab.TAB);
+        this.setCreativeTab(GctAdditionsCreativeTab.TAB);
 
     }
 

@@ -2,7 +2,7 @@ package com.shiver.gct_additions.common.items;
 
 import java.util.List;
 
-import com.shiver.gct_additions.misc.GctAllCreativeTab;
+import com.shiver.gct_additions.misc.GctAdditionsCreativeTab;
 
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.item.Item;
@@ -26,7 +26,7 @@ public class InfoItem extends Item {
         setMaxStackSize(maxStackSize);
         setTranslationKey(name);
         setRegistryName(name);
-        setCreativeTab(GctAllCreativeTab.TAB);
+        setCreativeTab(GctAdditionsCreativeTab.TAB);
     }
 
     @Override

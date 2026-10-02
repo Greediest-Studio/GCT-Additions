@@ -3,7 +3,7 @@ package com.shiver.gct_additions.common.entity;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.Random;
-import com.shiver.gct_additions.misc.registry.GctAllItems;
+import com.shiver.gct_additions.misc.registry.GctAdditionsItems;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.client.model.ModelBase;
 import net.minecraft.client.model.ModelBiped;
@@ -212,7 +212,7 @@ public final class EntityApocalypseKnight {
     }
 
     private void spawnApocalypsiumScraps() {
-      ItemStack stack = new ItemStack(GctAllItems.APOCALYPSIUM_SCRAP, this.rand.nextInt(16) + 10);
+      ItemStack stack = new ItemStack(GctAdditionsItems.APOCALYPSIUM_SCRAP, this.rand.nextInt(16) + 10);
       EntityItem item = new EntityItem(this.world, this.posX, this.posY, this.posZ, stack);
       item.setPickupDelay(10);
       this.world.spawnEntity(item);

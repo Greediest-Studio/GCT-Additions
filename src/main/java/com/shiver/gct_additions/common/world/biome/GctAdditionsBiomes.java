@@ -4,8 +4,8 @@ import net.minecraft.world.biome.Biome;
 import net.minecraftforge.common.BiomeDictionary;
 import net.minecraftforge.event.RegistryEvent;
 
-public final class GctAllBiomes {
-    private GctAllBiomes() {
+public final class GctAdditionsBiomes {
+    private GctAdditionsBiomes() {
     }
 
     public static void registerBiomes(RegistryEvent.Register<Biome> event) {

@@ -1,6 +1,6 @@
 package com.shiver.gct_additions.common.blocks;
 
-import com.shiver.gct_additions.misc.GctAllCreativeTab;
+import com.shiver.gct_additions.misc.GctAdditionsCreativeTab;
 
 import java.util.Random;
 import javax.annotation.Nullable;
@@ -39,7 +39,7 @@ public BlockBesideVoidPortal1() {
     setResistance(10.0F);
     setLightLevel(0.33333334F);
     setLightOpacity(0);
-    setCreativeTab(GctAllCreativeTab.TAB);
+    setCreativeTab(GctAdditionsCreativeTab.TAB);
     setBlockUnbreakable();
   }
 

@@ -1,6 +1,6 @@
 package com.shiver.gct_additions.common.entity;
 
-import com.shiver.gct_additions.misc.registry.GctAllItems;
+import com.shiver.gct_additions.misc.registry.GctAdditionsItems;
 
 
 import java.util.ArrayList;
@@ -73,7 +73,7 @@ public final class EntityBligtz {
         });
     RenderingRegistry.registerEntityRenderingHandler(BligtzProjectileEntity.class, renderManager -> new RenderSnowball<BligtzProjectileEntity>(renderManager, null, Minecraft.getMinecraft().getRenderItem()) {
           public ItemStack getStackToRender(EntityBligtz.BligtzProjectileEntity entity) {
-            return new ItemStack(GctAllItems.STORM_BLIGTZ_DUST);
+            return new ItemStack(GctAdditionsItems.STORM_BLIGTZ_DUST);
           }
         });
   }

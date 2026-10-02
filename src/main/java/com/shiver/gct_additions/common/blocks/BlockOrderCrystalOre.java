@@ -1,8 +1,8 @@
 package com.shiver.gct_additions.common.blocks;
 
-import com.shiver.gct_additions.misc.registry.GctAllItems;
+import com.shiver.gct_additions.misc.registry.GctAdditionsItems;
 
-import com.shiver.gct_additions.misc.GctAllCreativeTab;
+import com.shiver.gct_additions.misc.GctAdditionsCreativeTab;
 import net.minecraft.block.Block;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
@@ -23,11 +23,11 @@ public class BlockOrderCrystalOre extends Block {
         setHardness(150.0F);
         setResistance(2000000.0F);
         setLightOpacity(15);
-        setCreativeTab(GctAllCreativeTab.TAB);
+        setCreativeTab(GctAdditionsCreativeTab.TAB);
     }
 
     @Override
     public void getDrops(NonNullList<ItemStack> drops, IBlockAccess world, BlockPos pos, IBlockState state, int fortune) {
-        drops.add(new ItemStack(GctAllItems.ORDER_CRYSTAL));
+        drops.add(new ItemStack(GctAdditionsItems.ORDER_CRYSTAL));
     }
 }

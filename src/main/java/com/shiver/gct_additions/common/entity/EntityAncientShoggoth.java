@@ -7,7 +7,7 @@ import com.shiver.gct_additions.common.blocks.BlockSaniteOre;
 import com.shiver.gct_additions.common.events.SanityEvents;
 import com.shiver.gct_additions.common.items.ItemShoggothTancale;
 import com.shiver.gct_additions.common.potions.PotionAbyssPlague;
-import com.shiver.gct_additions.misc.registry.GctAllItems;
+import com.shiver.gct_additions.misc.registry.GctAdditionsItems;
 import net.minecraft.client.model.ModelBase;
 import net.minecraft.client.model.ModelRenderer;
 import net.minecraft.client.renderer.GlStateManager;
@@ -141,8 +141,8 @@ public final class EntityAncientShoggoth {
       super.onDeath(source);
       if (!this.world.isRemote) {
         spawnDrop(new ItemStack(BlockSaniteOre.block, 5 + this.rand.nextInt(8)));
-        spawnDrop(new ItemStack(GctAllItems.ESSENCE_OF_DARKERREALM));
-        spawnDrop(new ItemStack(GctAllItems.SHOGGOTH_TOOTH));
+        spawnDrop(new ItemStack(GctAdditionsItems.ESSENCE_OF_DARKERREALM));
+        spawnDrop(new ItemStack(GctAdditionsItems.SHOGGOTH_TOOTH));
         spawnDrop(new ItemStack(ItemShoggothTancale.block, 2 + this.rand.nextInt(4)));
       }
     }

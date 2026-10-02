@@ -2,7 +2,7 @@
 package com.shiver.gct_additions.common.events;
 
 import com.shiver.gct_additions.common.world.structure.StructureGenerationHelper;
-import com.shiver.gct_additions.common.world.structure.GctAllStructureTemplates;
+import com.shiver.gct_additions.common.world.structure.GctAdditionsStructureTemplates;
 
 import net.minecraft.util.Mirror;
 import net.minecraft.util.Rotation;
@@ -17,16 +17,16 @@ public final class DoorKeyOrderlandClick
     
     public static void run(Entity entity, World world, int x, int y, int z) {
         if (entity.getHorizontalFacing() == EnumFacing.EAST && !world.isRemote) {
-            StructureGenerationHelper.placeTemplate(world, GctAllStructureTemplates.ORDER_PORTAL, new BlockPos(x, y + 1, z - 1), Rotation.NONE, Mirror.NONE);
+            StructureGenerationHelper.placeTemplate(world, GctAdditionsStructureTemplates.ORDER_PORTAL, new BlockPos(x, y + 1, z - 1), Rotation.NONE, Mirror.NONE);
         }
         if (entity.getHorizontalFacing() == EnumFacing.WEST && !world.isRemote) {
-            StructureGenerationHelper.placeTemplate(world, GctAllStructureTemplates.ORDER_PORTAL, new BlockPos(x, y + 1, z - 2), Rotation.NONE, Mirror.NONE);
+            StructureGenerationHelper.placeTemplate(world, GctAdditionsStructureTemplates.ORDER_PORTAL, new BlockPos(x, y + 1, z - 2), Rotation.NONE, Mirror.NONE);
         }
         if (entity.getHorizontalFacing() == EnumFacing.NORTH && !world.isRemote) {
-            StructureGenerationHelper.placeTemplate(world, GctAllStructureTemplates.ORDER_PORTAL_2, new BlockPos(x - 1, y + 1, z), Rotation.NONE, Mirror.NONE);
+            StructureGenerationHelper.placeTemplate(world, GctAdditionsStructureTemplates.ORDER_PORTAL_2, new BlockPos(x - 1, y + 1, z), Rotation.NONE, Mirror.NONE);
         }
         if (entity.getHorizontalFacing() == EnumFacing.SOUTH && !world.isRemote) {
-            StructureGenerationHelper.placeTemplate(world, GctAllStructureTemplates.ORDER_PORTAL_2, new BlockPos(x - 2, y + 1, z), Rotation.NONE, Mirror.NONE);
+            StructureGenerationHelper.placeTemplate(world, GctAdditionsStructureTemplates.ORDER_PORTAL_2, new BlockPos(x - 2, y + 1, z), Rotation.NONE, Mirror.NONE);
         }
     }
 }

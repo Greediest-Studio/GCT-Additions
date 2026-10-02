@@ -1,9 +1,9 @@
 package com.shiver.gct_additions.common.blocks;
 
-import com.shiver.gct_additions.misc.registry.GctAllItems;
+import com.shiver.gct_additions.misc.registry.GctAdditionsItems;
 
 
-import com.shiver.gct_additions.misc.GctAllCreativeTab;
+import com.shiver.gct_additions.misc.GctAdditionsCreativeTab;
 
 import java.util.Random;
 import net.minecraft.block.Block;
@@ -34,11 +34,11 @@ import net.minecraft.world.World;
     setResistance(30.0F);
     setLightLevel(0.0F);
     setLightOpacity(255);
-    setCreativeTab(GctAllCreativeTab.TAB);
+    setCreativeTab(GctAdditionsCreativeTab.TAB);
   }
 
   public void getDrops(NonNullList<ItemStack> drops, IBlockAccess world, BlockPos pos, IBlockState state, int fortune) {
-    drops.add(new ItemStack(GctAllItems.GRAVITY_SCRAP, 2));
+    drops.add(new ItemStack(GctAdditionsItems.GRAVITY_SCRAP, 2));
   }
 
   public void onBlockAdded(World world, BlockPos pos, IBlockState state) {

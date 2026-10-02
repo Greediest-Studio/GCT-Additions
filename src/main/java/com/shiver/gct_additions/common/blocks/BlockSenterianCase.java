@@ -1,6 +1,6 @@
 package com.shiver.gct_additions.common.blocks;
 
-import com.shiver.gct_additions.misc.GctAllCreativeTab;
+import com.shiver.gct_additions.misc.GctAdditionsCreativeTab;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.SoundType;
@@ -15,6 +15,6 @@ public class BlockSenterianCase extends Block {
         setHardness(50.0F);
         setResistance(4000.0F);
         setLightOpacity(15);
-        setCreativeTab(GctAllCreativeTab.TAB);
+        setCreativeTab(GctAdditionsCreativeTab.TAB);
     }
 }

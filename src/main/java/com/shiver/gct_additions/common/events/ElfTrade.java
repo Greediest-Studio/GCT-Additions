@@ -1,6 +1,6 @@
 package com.shiver.gct_additions.common.events;
 
-import com.shiver.gct_additions.misc.registry.GctAllItems;
+import com.shiver.gct_additions.misc.registry.GctAdditionsItems;
 
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
@@ -16,12 +16,12 @@ public final class ElfTrade {
 
   public static void run(Entity entity, World world, int x, int y, int z) {
     if (((entity instanceof EntityLivingBase) ? ((EntityLivingBase)entity).getHeldItemMainhand() : ItemStack.EMPTY)
-      .getItem() == (new ItemStack(GctAllItems.ELF_PASSES, 1)).getItem()) {
+      .getItem() == (new ItemStack(GctAdditionsItems.ELF_PASSES, 1)).getItem()) {
       if (entity instanceof EntityPlayer)
-        ((EntityPlayer)entity).inventory.clearMatchingItems((new ItemStack(GctAllItems.ELF_PASSES, 1)).getItem(), -1, 1, null);
+        ((EntityPlayer)entity).inventory.clearMatchingItems((new ItemStack(GctAdditionsItems.ELF_PASSES, 1)).getItem(), -1, 1, null);
       messageNearbyPlayers(world, x, y, z, "<精灵>这东西真不错！");
       if (entity instanceof EntityPlayer) {
-        ItemStack _setstack = new ItemStack(GctAllItems.NATURALLINE_SCRAP, 1);
+        ItemStack _setstack = new ItemStack(GctAdditionsItems.NATURALLINE_SCRAP, 1);
         _setstack.setCount(1);
         ItemHandlerHelper.giveItemToPlayer((EntityPlayer)entity, _setstack);
       }

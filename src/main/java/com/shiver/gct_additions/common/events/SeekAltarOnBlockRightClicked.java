@@ -4,7 +4,7 @@ import com.shiver.gct_additions.common.blocks.BlockAzathothiumOreComplex;
 import com.shiver.gct_additions.common.blocks.BlockNyralathotepiumOreComplex;
 import com.shiver.gct_additions.common.blocks.BlockShubniggurathiumOreComplex;
 import com.shiver.gct_additions.common.blocks.BlockYogsothothiumOreComplex;
-import com.shiver.gct_additions.misc.registry.GctAllItems;
+import com.shiver.gct_additions.misc.registry.GctAdditionsItems;
 import net.minecraft.block.Block;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
@@ -28,10 +28,10 @@ public final class SeekAltarOnBlockRightClicked {
 
         Block blockAbove = world.getBlockState(altarPos.up()).getBlock();
         String recipeName = getOreRecipe(blockAbove);
-        if (recipeName == null && isHolding(entity, GctAllItems.SOUL_STEALER_SCROLL)) {
+        if (recipeName == null && isHolding(entity, GctAdditionsItems.SOUL_STEALER_SCROLL)) {
             recipeName = "zjarugoth_summon";
             if (!world.isRemote && entity instanceof EntityPlayer) {
-                ((EntityPlayer) entity).inventory.clearMatchingItems(GctAllItems.SOUL_STEALER_SCROLL, -1, 1, null);
+                ((EntityPlayer) entity).inventory.clearMatchingItems(GctAdditionsItems.SOUL_STEALER_SCROLL, -1, 1, null);
             }
         }
 

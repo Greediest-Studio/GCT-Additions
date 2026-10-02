@@ -8,7 +8,7 @@ import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.SoundEvent;
 import net.minecraftforge.event.RegistryEvent;
 
-public final class GctAllSounds {
+public final class GctAdditionsSounds {
     private static final Map<ResourceLocation, SoundEvent> SOUNDS = new HashMap<>();
 
     static {
@@ -36,7 +36,7 @@ public final class GctAllSounds {
         registerSound("deepslate_place");
     }
 
-    private GctAllSounds() {
+    private GctAdditionsSounds() {
     }
 
     public static void registerSounds(RegistryEvent.Register<SoundEvent> event) {

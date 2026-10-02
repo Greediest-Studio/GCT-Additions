@@ -1,6 +1,6 @@
 package com.shiver.gct_additions.common.events;
 
-import com.shiver.gct_additions.misc.registry.GctAllItems;
+import com.shiver.gct_additions.misc.registry.GctAdditionsItems;
 
 import com.shiver.gct_additions.common.blocks.BlockResonateDebris;
 import net.minecraft.entity.Entity;
@@ -19,7 +19,7 @@ public final class ResonateDebrisMine {
       .canHarvestBlock(BlockResonateDebris.block.getDefaultState())) {
       if (!world.isRemote)
         for (int i = 0; i < 2; i++) {
-        EntityItem entityToSpawn = new EntityItem(world, x, y, z, new ItemStack(GctAllItems.RESONATED_SCRAP, 1));
+        EntityItem entityToSpawn = new EntityItem(world, x, y, z, new ItemStack(GctAdditionsItems.RESONATED_SCRAP, 1));
         entityToSpawn.setPickupDelay(10);
         world.spawnEntity((Entity)entityToSpawn);
       }

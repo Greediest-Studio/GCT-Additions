@@ -1,7 +1,7 @@
 package com.shiver.gct_additions.common.data;
 
 import com.shiver.gct_additions.common.network.ClientTasks;
-import com.shiver.gct_additions.common.network.GctAllNetwork;
+import com.shiver.gct_additions.network.GctAdditionsNetwork;
 import io.netty.buffer.ByteBuf;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.world.World;
@@ -14,8 +14,8 @@ import net.minecraftforge.fml.relauncher.Side;
 
 import com.shiver.gct_additions.Tags;
 
-public final class GctAllVariables {
-    private GctAllVariables() {
+public final class GctAdditionsVariables {
+    private GctAdditionsVariables() {
     }
 
     public static class MapVariables extends WorldSavedData {
@@ -48,9 +48,9 @@ public final class GctAllVariables {
         public void syncData(World world) {
             markDirty();
             if (world.isRemote) {
-                GctAllNetwork.CHANNEL.sendToServer(new WorldSavedDataSyncMessage(0, this));
+                GctAdditionsNetwork.CHANNEL.sendToServer(new WorldSavedDataSyncMessage(0, this));
             } else {
-                GctAllNetwork.CHANNEL.sendToAll(new WorldSavedDataSyncMessage(0, this));
+                GctAdditionsNetwork.CHANNEL.sendToAll(new WorldSavedDataSyncMessage(0, this));
             }
         }
 
@@ -87,9 +87,9 @@ public final class GctAllVariables {
         public void syncData(World world) {
             markDirty();
             if (world.isRemote) {
-                GctAllNetwork.CHANNEL.sendToServer(new WorldSavedDataSyncMessage(1, this));
+                GctAdditionsNetwork.CHANNEL.sendToServer(new WorldSavedDataSyncMessage(1, this));
             } else {
-                GctAllNetwork.CHANNEL.sendToDimension(new WorldSavedDataSyncMessage(1, this),
+                GctAdditionsNetwork.CHANNEL.sendToDimension(new WorldSavedDataSyncMessage(1, this),
                         world.provider.getDimension());
             }
         }
@@ -151,9 +151,9 @@ public final class GctAllVariables {
             if (side == Side.SERVER) {
                 message.data.markDirty();
                 if (message.type == 0) {
-                    GctAllNetwork.CHANNEL.sendToAll(message);
+                    GctAdditionsNetwork.CHANNEL.sendToAll(message);
                 } else {
-                    GctAllNetwork.CHANNEL.sendToDimension(message, world.provider.getDimension());
+                    GctAdditionsNetwork.CHANNEL.sendToDimension(message, world.provider.getDimension());
                 }
             }
             if (message.type == 0) {

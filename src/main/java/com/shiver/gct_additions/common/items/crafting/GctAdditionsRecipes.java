@@ -9,8 +9,8 @@ import com.shiver.gct_additions.common.blocks.BlockOrderStoneBrickCrashed;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
-public final class GctAllRecipes {
-    private GctAllRecipes() {
+public final class GctAdditionsRecipes {
+    private GctAdditionsRecipes() {
     }
 
     public static void registerSmelting() {

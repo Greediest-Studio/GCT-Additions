@@ -1,8 +1,8 @@
 package com.shiver.gct_additions.misc.registry;
 
 import com.shiver.gct_additions.Tags;
-import com.shiver.gct_additions.common.potions.GctAllPotions;
-import com.shiver.gct_additions.common.world.biome.GctAllBiomes;
+import com.shiver.gct_additions.common.potions.GctAdditionsPotions;
+import com.shiver.gct_additions.common.world.biome.GctAdditionsBiomes;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 import net.minecraft.potion.Potion;
@@ -18,48 +18,48 @@ import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
 @Mod.EventBusSubscriber(modid = Tags.MOD_ID)
-public final class GctAllRegistry {
-    private GctAllRegistry() {
+public final class GctAdditionsRegistry {
+    private GctAdditionsRegistry() {
     }
 
     @SubscribeEvent
     public static void registerBlocks(RegistryEvent.Register<Block> event) {
-        GctAllContent.registerBlocks(event);
+        GctAdditionsContent.registerBlocks(event);
     }
 
     @SubscribeEvent
     public static void registerItems(RegistryEvent.Register<Item> event) {
-        GctAllContent.registerItems(event);
+        GctAdditionsContent.registerItems(event);
     }
 
     @SubscribeEvent
     public static void registerBiomes(RegistryEvent.Register<Biome> event) {
-        GctAllBiomes.registerBiomes(event);
+        GctAdditionsBiomes.registerBiomes(event);
     }
 
     @SubscribeEvent
     public static void registerEntities(RegistryEvent.Register<EntityEntry> event) {
-        GctAllEntityRegistry.registerEntities(event);
+        GctAdditionsEntityRegistry.registerEntities(event);
     }
 
     @SubscribeEvent
     public static void registerPotions(RegistryEvent.Register<Potion> event) {
-        GctAllPotions.registerPotions(event);
+        GctAdditionsPotions.registerPotions(event);
     }
 
     @SubscribeEvent
     public static void registerPotionTypes(RegistryEvent.Register<PotionType> event) {
-        GctAllPotions.registerPotionTypes(event);
+        GctAdditionsPotions.registerPotionTypes(event);
     }
 
     @SubscribeEvent
     public static void registerSounds(RegistryEvent.Register<SoundEvent> event) {
-        GctAllSounds.registerSounds(event);
+        GctAdditionsSounds.registerSounds(event);
     }
 
     @SideOnly(Side.CLIENT)
     @SubscribeEvent
     public static void registerModels(ModelRegistryEvent event) {
-        GctAllContent.registerModels(event);
+        GctAdditionsContent.registerModels(event);
     }
 }

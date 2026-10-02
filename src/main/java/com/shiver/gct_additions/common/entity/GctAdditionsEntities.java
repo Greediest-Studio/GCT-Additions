@@ -26,8 +26,8 @@ import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
-public final class GctAllEntities {
-    private GctAllEntities() {
+public final class GctAdditionsEntities {
+    private GctAdditionsEntities() {
     }
 
     public static void init(FMLInitializationEvent event) {

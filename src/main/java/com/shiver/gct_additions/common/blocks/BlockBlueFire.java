@@ -1,6 +1,6 @@
 package com.shiver.gct_additions.common.blocks;
 
-import com.shiver.gct_additions.misc.GctAllCreativeTab;
+import com.shiver.gct_additions.misc.GctAdditionsCreativeTab;
 
 import java.util.Random;
 import javax.annotation.Nullable;
@@ -32,7 +32,7 @@ import net.minecraftforge.fml.relauncher.SideOnly;
     setResistance(10.0F);
     setLightLevel(1.0F);
     setLightOpacity(0);
-    setCreativeTab(GctAllCreativeTab.TAB);
+    setCreativeTab(GctAdditionsCreativeTab.TAB);
   }
 
   @SideOnly(Side.CLIENT)

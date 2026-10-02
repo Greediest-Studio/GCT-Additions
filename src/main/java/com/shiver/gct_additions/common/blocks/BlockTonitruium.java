@@ -1,6 +1,6 @@
 package com.shiver.gct_additions.common.blocks;
 
-import com.shiver.gct_additions.client.GctAllFluidModels;
+import com.shiver.gct_additions.client.GctAdditionsFluidModels;
 import com.shiver.gct_additions.common.potions.PotionChanneling;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
@@ -64,6 +64,6 @@ public class BlockTonitruium extends BlockFluidClassic {
 
     @SideOnly(Side.CLIENT)
     public static void registerModels(ModelRegistryEvent event) {
-        GctAllFluidModels.register(block, item, "tonitruium");
+        GctAdditionsFluidModels.register(block, item, "tonitruium");
     }
 }

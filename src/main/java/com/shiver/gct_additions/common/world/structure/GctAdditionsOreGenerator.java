@@ -45,8 +45,8 @@ import net.minecraft.world.gen.feature.WorldGenFlowers;
 import net.minecraft.world.gen.feature.WorldGenLakes;
 import net.minecraft.world.gen.feature.WorldGenMinable;
 
-final class GctAllOreGenerator {
-    private GctAllOreGenerator() {
+final class GctAdditionsOreGenerator {
+    private GctAdditionsOreGenerator() {
     }
 
     static void generate(Random random, int chunkX, int chunkZ, World world, int dimensionId) {

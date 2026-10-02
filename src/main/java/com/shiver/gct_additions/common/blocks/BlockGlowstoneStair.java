@@ -7,7 +7,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.util.NonNullList;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.util.BlockRenderLayer;
-import com.shiver.gct_additions.misc.GctAllCreativeTab;
+import com.shiver.gct_additions.misc.GctAdditionsCreativeTab;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.BlockStairs;
@@ -26,7 +26,7 @@ public class BlockGlowstoneStair extends BlockStairs {
     this.setResistance(10.0f);
     this.setLightLevel(1.0f);
     this.setLightOpacity(0);
-    this.setCreativeTab(GctAllCreativeTab.TAB);
+    this.setCreativeTab(GctAdditionsCreativeTab.TAB);
 
     }
 

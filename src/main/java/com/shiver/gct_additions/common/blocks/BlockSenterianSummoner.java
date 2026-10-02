@@ -1,6 +1,6 @@
 package com.shiver.gct_additions.common.blocks;
 
-import com.shiver.gct_additions.misc.GctAllCreativeTab;
+import com.shiver.gct_additions.misc.GctAdditionsCreativeTab;
 import com.shiver.gct_additions.common.events.SenterianSummonerSummon;
 import java.util.Random;
 import net.minecraft.block.Block;
@@ -45,7 +45,7 @@ public class BlockSenterianSummoner extends Block implements ITileEntityProvider
         setResistance(10.0F);
         setLightLevel(0.6666667F);
         setLightOpacity(15);
-        setCreativeTab(GctAllCreativeTab.TAB);
+        setCreativeTab(GctAdditionsCreativeTab.TAB);
         setBlockUnbreakable();
     }
 @SideOnly(Side.CLIENT)

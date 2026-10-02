@@ -1,6 +1,6 @@
 package com.shiver.gct_additions.common.blocks;
 
-import com.shiver.gct_additions.misc.GctAllCreativeTab;
+import com.shiver.gct_additions.misc.GctAdditionsCreativeTab;
 
 import java.util.List;
 import net.minecraft.block.Block;
@@ -27,7 +27,7 @@ import net.minecraft.world.World;
     setResistance(2000000.0F);
     setLightLevel(0.0F);
     setLightOpacity(255);
-    setCreativeTab(GctAllCreativeTab.TAB);
+    setCreativeTab(GctAdditionsCreativeTab.TAB);
   }
 
   public void addInformation(ItemStack itemstack, World world, List<String> list, ITooltipFlag flag) {

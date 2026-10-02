@@ -14,7 +14,7 @@ import net.minecraftforge.fml.common.registry.ForgeRegistries;
 
 import com.shiver.gct_additions.Tags;
 
-public final class GctAllTreeGenerator {
+public final class GctAdditionsTreeGenerator {
     private static final String MOD_ID = Tags.MOD_ID;
 
     private static final TreeDefinition[] TREES = {
@@ -41,7 +41,7 @@ public final class GctAllTreeGenerator {
                     6, 1, 2, "lunar_grass")
     };
 
-    private GctAllTreeGenerator() {
+    private GctAdditionsTreeGenerator() {
     }
 
     public static void generate(Random random, int blockX, int blockZ, World world, int dimensionId) {

@@ -1,6 +1,6 @@
 package com.shiver.gct_additions.common.blocks;
 
-import com.shiver.gct_additions.misc.GctAllCreativeTab;
+import com.shiver.gct_additions.misc.GctAdditionsCreativeTab;
 
 import java.util.Random;
 import com.shiver.gct_additions.common.events.BesideVoidPortalBegin;
@@ -41,7 +41,7 @@ public BlockPrimordialPortalHolder() {
     setResistance(10.0F);
     setLightLevel(0.0F);
     setLightOpacity(0);
-    setCreativeTab(GctAllCreativeTab.TAB);
+    setCreativeTab(GctAdditionsCreativeTab.TAB);
   }
 
   @SideOnly(Side.CLIENT)

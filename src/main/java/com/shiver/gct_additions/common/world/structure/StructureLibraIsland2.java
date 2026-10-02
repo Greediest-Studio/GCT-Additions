@@ -7,7 +7,7 @@ import net.minecraft.world.World;
 
 public class StructureLibraIsland2 extends AirborneTemplateStructure {
     public StructureLibraIsland2() {
-        super(WorldStarland.DIMID, 100000, GctAllStructureTemplates.ASTRAL_ISLAND_2, 17, 50, 0);
+        super(WorldStarland.DIMID, 100000, GctAdditionsStructureTemplates.ASTRAL_ISLAND_2, 17, 50, 0);
     }
 
     @Override

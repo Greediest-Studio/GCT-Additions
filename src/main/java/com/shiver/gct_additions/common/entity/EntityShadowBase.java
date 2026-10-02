@@ -1,6 +1,6 @@
 package com.shiver.gct_additions.common.entity;
 
-import com.shiver.gct_additions.misc.registry.GctAllItems;
+import com.shiver.gct_additions.misc.registry.GctAdditionsItems;
 
 import net.minecraft.client.model.ModelBase;
 import net.minecraft.client.model.ModelBox;
@@ -60,7 +60,7 @@ public final class EntityShadowBase {
     }
 
     protected Item getDropItem() {
-      return (new ItemStack(GctAllItems.SHADOW_NUCLEAR, 1)).getItem();
+      return (new ItemStack(GctAdditionsItems.SHADOW_NUCLEAR, 1)).getItem();
     }
 
     public SoundEvent getAmbientSound() {

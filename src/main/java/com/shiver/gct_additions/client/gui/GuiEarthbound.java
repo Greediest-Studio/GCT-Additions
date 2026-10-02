@@ -5,7 +5,7 @@ import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.function.Supplier;
-import com.shiver.gct_additions.common.network.GctAllNetwork;
+import com.shiver.gct_additions.network.GctAdditionsNetwork;
 import net.minecraft.client.gui.GuiButton;
 import net.minecraft.client.gui.inventory.GuiContainer;
 import net.minecraft.entity.player.EntityPlayer;
@@ -184,7 +184,7 @@ public final class GuiEarthbound {
 
     private void slotChanged(int slotid, int ctype, int meta) {
       if (this.world != null && this.world.isRemote) {
-        GctAllNetwork.CHANNEL.sendToServer(new GuiEarthbound.GUISlotChangedMessage(slotid, this.x, this.y, this.z, ctype, meta));
+        GctAdditionsNetwork.CHANNEL.sendToServer(new GuiEarthbound.GUISlotChangedMessage(slotid, this.x, this.y, this.z, ctype, meta));
         GuiEarthbound.handleSlotAction(this.entity, slotid, ctype, meta, this.x, this.y, this.z);
       }
     }
@@ -257,7 +257,7 @@ public final class GuiEarthbound {
     }
 
     protected void actionPerformed(GuiButton button) {
-      GctAllNetwork.CHANNEL.sendToServer(new GuiEarthbound.GUIButtonPressedMessage(button.id, this.x, this.y, this.z));
+      GctAdditionsNetwork.CHANNEL.sendToServer(new GuiEarthbound.GUIButtonPressedMessage(button.id, this.x, this.y, this.z));
       GuiEarthbound.handleButtonAction(this.entity, button.id, this.x, this.y, this.z);
     }
 

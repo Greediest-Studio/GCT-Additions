@@ -3,7 +3,7 @@ package com.shiver.gct_additions.common.items;
 
 import java.util.List;
 
-import com.shiver.gct_additions.misc.GctAllCreativeTab;
+import com.shiver.gct_additions.misc.GctAdditionsCreativeTab;
 import com.shiver.gct_additions.common.events.CreepyWitherstormDollClick;
 
 import net.minecraft.client.util.ITooltipFlag;
@@ -23,7 +23,7 @@ public class ItemCreepyWitherstormDoll extends Item {
         this.maxStackSize = 1;
         this.setTranslationKey("creepy_witherstorm_doll");
         this.setRegistryName("creepy_witherstorm_doll");
-        this.setCreativeTab(GctAllCreativeTab.TAB);
+        this.setCreativeTab(GctAdditionsCreativeTab.TAB);
 
     }
 

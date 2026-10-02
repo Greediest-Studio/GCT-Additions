@@ -1,7 +1,7 @@
 package com.shiver.gct_additions.common.items;
 
 import com.shiver.gct_additions.Tags;
-import com.shiver.gct_additions.misc.GctAllCreativeTab;
+import com.shiver.gct_additions.misc.GctAdditionsCreativeTab;
 import net.darkhax.gamestages.GameStageHelper;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
@@ -24,7 +24,7 @@ public class ItemMuddyFlesh extends ItemFood {
       super(3, 0.3F, false);
       setTranslationKey("muddy_flesh");
       setRegistryName(new ResourceLocation(Tags.MOD_ID, "muddy_flesh"));
-      setCreativeTab(GctAllCreativeTab.TAB);
+      setCreativeTab(GctAdditionsCreativeTab.TAB);
       setMaxStackSize(64);
       setAlwaysEdible();
     }

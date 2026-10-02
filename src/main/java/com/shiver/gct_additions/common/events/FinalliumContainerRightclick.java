@@ -2,7 +2,7 @@
 package com.shiver.gct_additions.common.events;
 
 import com.shiver.gct_additions.common.blocks.BlockFinalliumContainerActive;
-import com.shiver.gct_additions.misc.registry.GctAllItems;
+import com.shiver.gct_additions.misc.registry.GctAdditionsItems;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.entity.player.EntityPlayer;
@@ -17,12 +17,12 @@ public final class FinalliumContainerRightclick
     }
     
     public static void run(Entity entity, World world, int x, int y, int z) {
-        if (((entity instanceof EntityLivingBase) ? ((EntityLivingBase)entity).getHeldItemMainhand() : ItemStack.EMPTY).getItem() == new ItemStack(GctAllItems.ORDERED_CORE, 1).getItem()) {
+        if (((entity instanceof EntityLivingBase) ? ((EntityLivingBase)entity).getHeldItemMainhand() : ItemStack.EMPTY).getItem() == new ItemStack(GctAdditionsItems.ORDERED_CORE, 1).getItem()) {
             if (entity instanceof EntityLivingBase) {
                 ((EntityLivingBase)entity).swingArm(EnumHand.MAIN_HAND);
             }
             if (entity instanceof EntityPlayer) {
-                ((EntityPlayer)entity).inventory.clearMatchingItems(new ItemStack(GctAllItems.ORDERED_CORE, 1).getItem(), -1, 1, (NBTTagCompound)null);
+                ((EntityPlayer)entity).inventory.clearMatchingItems(new ItemStack(GctAdditionsItems.ORDERED_CORE, 1).getItem(), -1, 1, (NBTTagCompound)null);
             }
             world.setBlockState(new BlockPos(x, y, z), BlockFinalliumContainerActive.block.getDefaultState(), 3);
         }

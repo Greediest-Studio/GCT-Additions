@@ -9,7 +9,7 @@ import net.minecraft.world.World;
 
 public class StructureReversedDungeon extends BiomeSurfaceTemplateStructure {
     public StructureReversedDungeon() {
-        super(WorldAlfheim.DIMID, 5000, GctAllStructureTemplates.REVERSED_DUNGEON, -50, Rotation.NONE, Mirror.NONE,
+        super(WorldAlfheim.DIMID, 5000, GctAdditionsStructureTemplates.REVERSED_DUNGEON, -50, Rotation.NONE, Mirror.NONE,
                 BiomeReversedForest.biome);
     }
 

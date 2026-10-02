@@ -3,7 +3,7 @@ package com.shiver.gct_additions.common.events;
 import com.shiver.gct_additions.common.blocks.BlockEarthboundCore;
 import com.shiver.gct_additions.common.blocks.BlockEarthboundReceiver;
 import com.shiver.gct_additions.common.compat.NaturesAuraCompat;
-import com.shiver.gct_additions.misc.registry.GctAllItems;
+import com.shiver.gct_additions.misc.registry.GctAdditionsItems;
 import com.shiver.gct_additions.common.items.ItemEarthOrb;
 import java.util.Random;
 import net.minecraft.block.Block;
@@ -63,12 +63,12 @@ public final class EarthboundAltarClick {
     }
 
     EntityLivingBase living = (EntityLivingBase) entity;
-    if (living.getHeldItemMainhand().getItem() != GctAllItems.HOLYSTEEL_INGOT) {
+    if (living.getHeldItemMainhand().getItem() != GctAdditionsItems.HOLYSTEEL_INGOT) {
       return;
     }
 
     if (entity instanceof EntityPlayer) {
-      ((EntityPlayer) entity).inventory.clearMatchingItems(GctAllItems.HOLYSTEEL_INGOT, -1, 1, null);
+      ((EntityPlayer) entity).inventory.clearMatchingItems(GctAdditionsItems.HOLYSTEEL_INGOT, -1, 1, null);
     }
     living.swingArm(EnumHand.MAIN_HAND);
 
@@ -78,7 +78,7 @@ public final class EarthboundAltarClick {
 
     if (!world.isRemote) {
       ItemStack result = world.rand.nextDouble() < 0.5D
-          ? new ItemStack(GctAllItems.EARTH_INGOT, 1)
+          ? new ItemStack(GctAdditionsItems.EARTH_INGOT, 1)
           : new ItemStack(Blocks.DIRT, 1, 0);
       EntityItem item = new EntityItem(world, x, y + 1, z, result);
       item.setPickupDelay(10);

@@ -3,7 +3,7 @@ package com.shiver.gct_additions.common.items;
 
 import java.util.List;
 
-import com.shiver.gct_additions.misc.GctAllCreativeTab;
+import com.shiver.gct_additions.misc.GctAdditionsCreativeTab;
 import com.shiver.gct_additions.common.events.RNGRelinquisherClick;
 
 import net.minecraft.client.util.ITooltipFlag;
@@ -23,7 +23,7 @@ public class ItemRNGRelinquisher extends Item {
         this.maxStackSize = 1;
         this.setTranslationKey("rng_relinquisher");
         this.setRegistryName("rng_relinquisher");
-        this.setCreativeTab(GctAllCreativeTab.TAB);
+        this.setCreativeTab(GctAdditionsCreativeTab.TAB);
 
     }
 

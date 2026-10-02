@@ -1,6 +1,6 @@
 package com.shiver.gct_additions.common.items;
 
-import com.shiver.gct_additions.misc.GctAllCreativeTab;
+import com.shiver.gct_additions.misc.GctAdditionsCreativeTab;
 import com.shiver.gct_additions.common.events.CommandDismantlerClick;
 import com.google.common.collect.Multimap;
 import net.minecraft.block.state.IBlockState;
@@ -25,7 +25,7 @@ public class ItemCommandDismantler extends Item {
         setMaxStackSize(1);
         setTranslationKey("command_dismantler");
         setRegistryName("command_dismantler");
-        setCreativeTab(GctAllCreativeTab.TAB);
+        setCreativeTab(GctAdditionsCreativeTab.TAB);
     }
 
     @Override

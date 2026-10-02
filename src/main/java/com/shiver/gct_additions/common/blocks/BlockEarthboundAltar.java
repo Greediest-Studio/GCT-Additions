@@ -1,6 +1,6 @@
 package com.shiver.gct_additions.common.blocks;
 
-import com.shiver.gct_additions.misc.GctAllCreativeTab;
+import com.shiver.gct_additions.misc.GctAdditionsCreativeTab;
 
 import com.shiver.gct_additions.common.events.EarthboundAltarClick;
 import com.shiver.gct_additions.common.tile.TileEntityEarthboundAltar;
@@ -37,7 +37,7 @@ public BlockEarthboundAltar() {
     setResistance(10.0F);
     setLightLevel(0.0F);
     setLightOpacity(0);
-    setCreativeTab(GctAllCreativeTab.TAB);
+    setCreativeTab(GctAdditionsCreativeTab.TAB);
   }
 
   @SideOnly(Side.CLIENT)

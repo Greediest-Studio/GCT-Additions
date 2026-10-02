@@ -1,6 +1,6 @@
 package com.shiver.gct_additions.client.gui;
 
-import com.shiver.gct_additions.misc.registry.GctAllItems;
+import com.shiver.gct_additions.misc.registry.GctAdditionsItems;
 
 import io.netty.buffer.ByteBuf;
 import java.io.IOException;
@@ -8,7 +8,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.function.Supplier;
 import com.shiver.gct_additions.GctAdditions;
-import com.shiver.gct_additions.common.network.GctAllNetwork;
+import com.shiver.gct_additions.network.GctAdditionsNetwork;
 import net.minecraft.client.gui.GuiButton;
 import net.minecraft.client.gui.inventory.GuiContainer;
 import net.minecraft.entity.player.EntityPlayer;
@@ -62,7 +62,7 @@ public final class GuiGUISanityAltar {
         this.internal = (IInventory)ent;
       this.customSlots.put(Integer.valueOf(0), addSlotToContainer(new Slot(this.internal, 0, 79, 39) {
               public boolean isItemValid(ItemStack stack) {
-                return ((new ItemStack(GctAllItems.ANCIENT_MUD, 1)).getItem() == stack.getItem());
+                return ((new ItemStack(GctAdditionsItems.ANCIENT_MUD, 1)).getItem() == stack.getItem());
               }
             }));
       int si;
@@ -181,7 +181,7 @@ public final class GuiGUISanityAltar {
 
     private void slotChanged(int slotid, int ctype, int meta) {
       if (this.world != null && this.world.isRemote) {
-        GctAllNetwork.CHANNEL.sendToServer(new GuiGUISanityAltar.GUISlotChangedMessage(slotid, this.x, this.y, this.z, ctype, meta));
+        GctAdditionsNetwork.CHANNEL.sendToServer(new GuiGUISanityAltar.GUISlotChangedMessage(slotid, this.x, this.y, this.z, ctype, meta));
         GuiGUISanityAltar.handleSlotAction(this.entity, slotid, ctype, meta, this.x, this.y, this.z);
       }
     }
@@ -254,7 +254,7 @@ public final class GuiGUISanityAltar {
     }
 
     protected void actionPerformed(GuiButton button) {
-      GctAllNetwork.CHANNEL.sendToServer(new GuiGUISanityAltar.GUIButtonPressedMessage(button.id, this.x, this.y, this.z));
+      GctAdditionsNetwork.CHANNEL.sendToServer(new GuiGUISanityAltar.GUIButtonPressedMessage(button.id, this.x, this.y, this.z));
       GuiGUISanityAltar.handleButtonAction(this.entity, button.id, this.x, this.y, this.z);
     }
 

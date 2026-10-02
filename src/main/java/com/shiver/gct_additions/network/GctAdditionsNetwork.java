@@ -21,4 +21,14 @@ public final class GctAdditionsNetwork {
     ) {
         CHANNEL.registerMessage(handler, message, packetId++, side);
     }
+
+    public static <T extends IMessage, V extends IMessage> void register(
+            Class<? extends IMessageHandler<T, V>> handler,
+            Class<T> message,
+            Side... sides
+    ) {
+        for (Side side : sides) {
+            registerMessage(handler, message, side);
+        }
+    }
 }

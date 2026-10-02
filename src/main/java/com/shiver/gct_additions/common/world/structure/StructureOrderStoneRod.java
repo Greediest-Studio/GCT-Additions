@@ -6,6 +6,6 @@ import com.shiver.gct_additions.common.world.biome.BiomeOrderPlain;
 
 public class StructureOrderStoneRod extends BiomeSurfaceTemplateStructure {
     public StructureOrderStoneRod() {
-        super(WorldOrderland.DIMID, 100000, GctAllStructureTemplates.ORDER_ROD_1, 0, BiomeOrderBasin.biome, BiomeOrderPlain.biome);
+        super(WorldOrderland.DIMID, 100000, GctAdditionsStructureTemplates.ORDER_ROD_1, 0, BiomeOrderBasin.biome, BiomeOrderPlain.biome);
     }
 }

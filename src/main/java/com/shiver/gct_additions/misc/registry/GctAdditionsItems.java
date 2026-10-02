@@ -1,7 +1,7 @@
 package com.shiver.gct_additions.misc.registry;
 
-import com.shiver.gct_additions.client.GctAllModels;
-import com.shiver.gct_additions.misc.GctAllCreativeTab;
+import com.shiver.gct_additions.client.GctAdditionsModels;
+import com.shiver.gct_additions.misc.GctAdditionsCreativeTab;
 import com.shiver.gct_additions.common.items.InfoItem;
 import com.shiver.gct_additions.common.items.ItemCommandDismantler;
 import com.shiver.gct_additions.common.items.ItemCreepyWitherDoll;
@@ -24,8 +24,8 @@ import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
-public final class GctAllItems {
-    private GctAllItems() {
+public final class GctAdditionsItems {
+    private GctAdditionsItems() {
     }
 
     public static final Item ESSENCE_OF_DARKERREALM = simple("essenceofdarkerrealm");
@@ -141,64 +141,64 @@ public final class GctAllItems {
 
     @SideOnly(Side.CLIENT)
     public static void registerModels() {
-        GctAllModels.item(ESSENCE_OF_DARKERREALM, "essenceofdarkerrealm");
-        GctAllModels.item(WARPED_SOUL, "warped_soul");
-        GctAllModels.item(FURTHER_SOUL, "further_soul");
-        GctAllModels.item(SOUL_STEALER_SCROLL, "soul_stealer_scroll");
-        GctAllModels.item(ANCIENT_MUD, "ancientmud");
-        GctAllModels.item(ANCIENT_SHOGGOTH_MUD, "ancient_shoggoth_mud");
-        GctAllModels.item(ItemMuddyFlesh.block, "muddy_flesh");
-        GctAllModels.item(SHOGGOTH_CLUMP, "shoggoth_clump");
-        GctAllModels.item(ItemShoggothTancale.block, "shoggothtancale");
-        GctAllModels.item(ItemShoggothTancaleSoup.block, "shoggoth_tancale_soup");
-        GctAllModels.item(SHOGGOTH_TOOTH, "shoggothtooth");
-        GctAllModels.item(ItemKeyOfDark.block, "keyofdark");
-        GctAllModels.item(KEY_OF_WARPED, "key_of_warped");
-        GctAllModels.item(ItemKeyOfWarpedActive.block, "key_of_warped_active");
+        GctAdditionsModels.item(ESSENCE_OF_DARKERREALM, "essenceofdarkerrealm");
+        GctAdditionsModels.item(WARPED_SOUL, "warped_soul");
+        GctAdditionsModels.item(FURTHER_SOUL, "further_soul");
+        GctAdditionsModels.item(SOUL_STEALER_SCROLL, "soul_stealer_scroll");
+        GctAdditionsModels.item(ANCIENT_MUD, "ancientmud");
+        GctAdditionsModels.item(ANCIENT_SHOGGOTH_MUD, "ancient_shoggoth_mud");
+        GctAdditionsModels.item(ItemMuddyFlesh.block, "muddy_flesh");
+        GctAdditionsModels.item(SHOGGOTH_CLUMP, "shoggoth_clump");
+        GctAdditionsModels.item(ItemShoggothTancale.block, "shoggothtancale");
+        GctAdditionsModels.item(ItemShoggothTancaleSoup.block, "shoggoth_tancale_soup");
+        GctAdditionsModels.item(SHOGGOTH_TOOTH, "shoggothtooth");
+        GctAdditionsModels.item(ItemKeyOfDark.block, "keyofdark");
+        GctAdditionsModels.item(KEY_OF_WARPED, "key_of_warped");
+        GctAdditionsModels.item(ItemKeyOfWarpedActive.block, "key_of_warped_active");
 
-        GctAllModels.item(APOCALYPSE_RUIN, "apocalypse_ruin");
-        GctAllModels.item(APOCALYPSIUM_SCRAP, "apocalypsium_scrap");
-        GctAllModels.item(SHADOW_NUCLEAR, "shadownuclear");
-        GctAllModels.item(GRAVITY_SCRAP, "gravity_scrap");
-        GctAllModels.item(RESONATED_SCRAP, "resonated_scrap");
-        GctAllModels.item(NATURALLINE_SCRAP, "naturalline_scrap");
+        GctAdditionsModels.item(APOCALYPSE_RUIN, "apocalypse_ruin");
+        GctAdditionsModels.item(APOCALYPSIUM_SCRAP, "apocalypsium_scrap");
+        GctAdditionsModels.item(SHADOW_NUCLEAR, "shadownuclear");
+        GctAdditionsModels.item(GRAVITY_SCRAP, "gravity_scrap");
+        GctAdditionsModels.item(RESONATED_SCRAP, "resonated_scrap");
+        GctAdditionsModels.item(NATURALLINE_SCRAP, "naturalline_scrap");
 
-        GctAllModels.item(EARTH_INGOT, "earth_ingot");
-        GctAllModels.item(ItemEarthOrb.block, "earth_orb");
-        GctAllModels.item(ELF_PASSES, "elf_passes");
-        GctAllModels.item(HOLYSTEEL_INGOT, "holysteel_ingot");
+        GctAdditionsModels.item(EARTH_INGOT, "earth_ingot");
+        GctAdditionsModels.item(ItemEarthOrb.block, "earth_orb");
+        GctAdditionsModels.item(ELF_PASSES, "elf_passes");
+        GctAdditionsModels.item(HOLYSTEEL_INGOT, "holysteel_ingot");
 
-        GctAllModels.item(ORDER_CRYSTAL, "order_crystal");
-        GctAllModels.item(ORDERED_CORE, "ordered_core");
-        GctAllModels.item(ItemCommandDismantler.block, "command_dismantler");
-        GctAllModels.item(DOOR_KEY_EMPTY, "door_key_empty");
-        GctAllModels.item(ItemDoorKeyOfOrderland.block, "door_key_of_orderland");
+        GctAdditionsModels.item(ORDER_CRYSTAL, "order_crystal");
+        GctAdditionsModels.item(ORDERED_CORE, "ordered_core");
+        GctAdditionsModels.item(ItemCommandDismantler.block, "command_dismantler");
+        GctAdditionsModels.item(DOOR_KEY_EMPTY, "door_key_empty");
+        GctAdditionsModels.item(ItemDoorKeyOfOrderland.block, "door_key_of_orderland");
 
-        GctAllModels.item(SENTERIAN_KEY, "senterian_key");
-        GctAllModels.item(ItemSenterianWrench.block, "senterian_wrench");
+        GctAdditionsModels.item(SENTERIAN_KEY, "senterian_key");
+        GctAdditionsModels.item(ItemSenterianWrench.block, "senterian_wrench");
 
-        GctAllModels.item(STORM_BLIGTZ_DUST, "bligtz_dust");
-        GctAllModels.item(STORM_BLIGTZ_ROD, "bligtz_rod");
-        GctAllModels.item(STORM_BNATUZ_DUST, "bnatuz_dust");
-        GctAllModels.item(STORM_BNATUZ_ROD, "bnatuz_rod");
-        GctAllModels.item(STORM_BNINZ_DUST, "bninz_dust");
-        GctAllModels.item(STORM_BNINZ_ROD, "bninz_rod");
-        GctAllModels.item(STORM_BTHDZ_DUST, "bthdz_dust");
-        GctAllModels.item(STORM_BTHDZ_ROD, "bthdz_rod");
+        GctAdditionsModels.item(STORM_BLIGTZ_DUST, "bligtz_dust");
+        GctAdditionsModels.item(STORM_BLIGTZ_ROD, "bligtz_rod");
+        GctAdditionsModels.item(STORM_BNATUZ_DUST, "bnatuz_dust");
+        GctAdditionsModels.item(STORM_BNATUZ_ROD, "bnatuz_rod");
+        GctAdditionsModels.item(STORM_BNINZ_DUST, "bninz_dust");
+        GctAdditionsModels.item(STORM_BNINZ_ROD, "bninz_rod");
+        GctAdditionsModels.item(STORM_BTHDZ_DUST, "bthdz_dust");
+        GctAdditionsModels.item(STORM_BTHDZ_ROD, "bthdz_rod");
 
-        GctAllModels.item(ItemFruitOfMind.block, "fruit_of_mind");
-        GctAllModels.item(ItemFruitOfMindEnchanted.block, "fruit_of_mind_enchanted");
-        GctAllModels.item(ItemRemnantCookie.block, "remnant_cookie");
-        GctAllModels.item(SANITE_SIPHON, "sanite_siphon");
-        GctAllModels.item(SANITY_OBSERVER, "sanity_observer");
+        GctAdditionsModels.item(ItemFruitOfMind.block, "fruit_of_mind");
+        GctAdditionsModels.item(ItemFruitOfMindEnchanted.block, "fruit_of_mind_enchanted");
+        GctAdditionsModels.item(ItemRemnantCookie.block, "remnant_cookie");
+        GctAdditionsModels.item(SANITE_SIPHON, "sanite_siphon");
+        GctAdditionsModels.item(SANITY_OBSERVER, "sanity_observer");
 
-        GctAllModels.item(ItemCreepyWitherDoll.block, "creepy_wither_doll");
-        GctAllModels.item(ItemCreepyWitherstormDoll.block, "creepy_witherstorm_doll");
-        GctAllModels.item(ItemGreedycraftModChanger.block, "greedycraft_mod_changer");
-        GctAllModels.item(RAINBOQUARTZ, "rainboquartz");
-        GctAllModels.item(ItemRNGRelinquisher.block, "rng_relinquisher");
-        GctAllModels.item(SHALLOITE, "shalloite");
-        GctAllModels.item(WITHERIUM_DUST, "witherium_dust");
+        GctAdditionsModels.item(ItemCreepyWitherDoll.block, "creepy_wither_doll");
+        GctAdditionsModels.item(ItemCreepyWitherstormDoll.block, "creepy_witherstorm_doll");
+        GctAdditionsModels.item(ItemGreedycraftModChanger.block, "greedycraft_mod_changer");
+        GctAdditionsModels.item(RAINBOQUARTZ, "rainboquartz");
+        GctAdditionsModels.item(ItemRNGRelinquisher.block, "rng_relinquisher");
+        GctAdditionsModels.item(SHALLOITE, "shalloite");
+        GctAdditionsModels.item(WITHERIUM_DUST, "witherium_dust");
     }
 
     private static Item simple(String name) {
@@ -207,7 +207,7 @@ public final class GctAllItems {
         item.setMaxStackSize(64);
         item.setTranslationKey(name);
         item.setRegistryName(name);
-        item.setCreativeTab(GctAllCreativeTab.TAB);
+        item.setCreativeTab(GctAdditionsCreativeTab.TAB);
         return item;
     }
 

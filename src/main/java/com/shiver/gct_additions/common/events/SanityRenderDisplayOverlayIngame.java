@@ -1,6 +1,6 @@
 package com.shiver.gct_additions.common.events;
 
-import com.shiver.gct_additions.misc.registry.GctAllItems;
+import com.shiver.gct_additions.misc.registry.GctAdditionsItems;
 
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
@@ -12,7 +12,7 @@ public final class SanityRenderDisplayOverlayIngame {
 
   public static boolean run(Entity entity) {
     if (entity instanceof EntityPlayer && ((EntityPlayer)entity).inventory
-      .hasItemStack(new ItemStack(GctAllItems.SANITY_OBSERVER, 1)))
+      .hasItemStack(new ItemStack(GctAdditionsItems.SANITY_OBSERVER, 1)))
       return true;
     return false;
   }

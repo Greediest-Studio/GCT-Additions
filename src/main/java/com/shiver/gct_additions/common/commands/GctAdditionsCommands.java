@@ -2,8 +2,8 @@ package com.shiver.gct_additions.common.commands;
 
 import net.minecraftforge.fml.common.event.FMLServerStartingEvent;
 
-public final class GctAllCommands {
-    private GctAllCommands() {
+public final class GctAdditionsCommands {
+    private GctAdditionsCommands() {
     }
 
     public static void register(FMLServerStartingEvent event) {

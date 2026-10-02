@@ -1,6 +1,6 @@
 package com.shiver.gct_additions.common.blocks;
 
-import com.shiver.gct_additions.misc.GctAllCreativeTab;
+import com.shiver.gct_additions.misc.GctAdditionsCreativeTab;
 
 import com.google.common.base.Predicate;
 import java.util.Random;
@@ -51,7 +51,7 @@ import net.minecraft.world.gen.feature.WorldGenMinable;
     setResistance(30.0F);
     setLightLevel(0.0F);
     setLightOpacity(255);
-    setCreativeTab(GctAllCreativeTab.TAB);
+    setCreativeTab(GctAdditionsCreativeTab.TAB);
   }
 
   public int quantityDropped(Random random) {

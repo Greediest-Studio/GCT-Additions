@@ -1,6 +1,6 @@
 package com.shiver.gct_additions.common.blocks;
 
-import com.shiver.gct_additions.misc.GctAllCreativeTab;
+import com.shiver.gct_additions.misc.GctAdditionsCreativeTab;
 import java.util.Random;
 import net.minecraft.block.BlockLeaves;
 import net.minecraft.block.BlockPlanks;
@@ -18,14 +18,14 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 import java.util.Collections;
 import java.util.List;
 
-public class GctAllLeavesBlock extends BlockLeaves {
-    public GctAllLeavesBlock(String name) {
+public class GctAdditionsLeavesBlock extends BlockLeaves {
+    public GctAdditionsLeavesBlock(String name) {
         setTranslationKey(name);
         setSoundType(SoundType.PLANT);
         setHardness(0.2F);
         setResistance(0.2F);
         setLightOpacity(255);
-        setCreativeTab(GctAllCreativeTab.TAB);
+        setCreativeTab(GctAdditionsCreativeTab.TAB);
         setDefaultState(this.blockState.getBaseState()
                 .withProperty(CHECK_DECAY, Boolean.FALSE)
                 .withProperty(DECAYABLE, Boolean.FALSE));

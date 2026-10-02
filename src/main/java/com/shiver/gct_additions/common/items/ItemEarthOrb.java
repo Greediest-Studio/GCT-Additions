@@ -1,6 +1,6 @@
 package com.shiver.gct_additions.common.items;
 
-import com.shiver.gct_additions.misc.GctAllCreativeTab;
+import com.shiver.gct_additions.misc.GctAdditionsCreativeTab;
 import com.google.common.collect.Multimap;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.EntityLivingBase;
@@ -22,7 +22,7 @@ public class ItemEarthOrb extends Item {
         setMaxStackSize(1);
         setTranslationKey("earth_orb");
         setRegistryName("earth_orb");
-        setCreativeTab(GctAllCreativeTab.TAB);
+        setCreativeTab(GctAdditionsCreativeTab.TAB);
     }
 
     @Override
