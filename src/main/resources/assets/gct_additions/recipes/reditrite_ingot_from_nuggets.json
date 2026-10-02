@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "NNN",
+    "NNN",
+    "NNN"
+  ],
+  "key": {
+    "N": {
+      "item": "gct_additions:reditrite_nugget"
+    }
+  },
+  "result": {
+    "item": "gct_additions:reditrite_ingot",
+    "count": 1
+  },
+  "group": "gct_additions"
+}

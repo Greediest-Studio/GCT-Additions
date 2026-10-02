@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "III",
+    "III",
+    "III"
+  ],
+  "key": {
+    "I": {
+      "item": "gct_additions:reditrite_ingot"
+    }
+  },
+  "result": {
+    "item": "gct_additions:reditrite_block",
+    "count": 1
+  },
+  "group": "gct_additions"
+}

@@ -192,7 +192,27 @@ public final class GctAdditionsOreDictionary {
             entry("plateWitheriumStormy", "stormy_witherium_plate"),
             entry("stoneOrdered", "order_stone"),
             entry("stoneOrdered", "order_stone_brick"),
-            entry("stoneOrdered", "order_stone_brick_chiseled")
+            entry("stoneOrdered", "order_stone_brick_chiseled"),
+            entry("blockBalancedMatrix", "balanced_matrix_block"),
+            entry("blockChaosShard", "chaos_shard_block"),
+            entry("blockStormyShard", "stormy_shard_block"),
+            entry("coreCommand", "command_core"),
+            entry("dustDraconiumAwakened", "awakened_draconium_dust"),
+            entry("frameElementiumSteel", "elemetiumsteel_machine_frame"),
+            entry("frameEverite", "everite_machine_frame"),
+            entry("frameGaiaSpirit", "gaia_spirit_machine_frame"),
+            entry("frameGaiaSteel", "gaia_steel_machine_frame"),
+            entry("frameGenite", "genite_machine_frame"),
+            entry("frameManasteel", "manasteel_machine_frame"),
+            entry("frameOrichalcos", "orichalcos_machine_frame"),
+            entry("frameTerrasteel", "terrasteel_machine_frame"),
+            entry("gemHermaphroditic", "hermaphroditic_artifact"),
+            entry("gemStormyShard", "stormy_shard"),
+            entry("ingotFinallium", "finallium_ingot"),
+            entry("nuggetAetherium", "aetherium_nugget"),
+            entry("nuggetApocalypsium", "apocalypsium_nugget"),
+            entry("nuggetSnowingium", "snowingium_nugget"),
+            entry("slimeball", "shoggoth_slimeball")
     );
 
     private GctAdditionsOreDictionary() {

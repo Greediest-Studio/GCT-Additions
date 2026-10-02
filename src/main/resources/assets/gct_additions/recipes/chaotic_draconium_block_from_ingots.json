@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "III",
+    "III",
+    "III"
+  ],
+  "key": {
+    "I": {
+      "item": "gct_additions:chaotic_draconium_ingot"
+    }
+  },
+  "result": {
+    "item": "gct_additions:chaotic_draconium_block",
+    "count": 1
+  },
+  "group": "gct_additions"
+}

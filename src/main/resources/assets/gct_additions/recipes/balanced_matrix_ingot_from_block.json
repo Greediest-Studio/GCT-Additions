@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "gct_additions:balanced_matrix_block"
+    }
+  ],
+  "result": {
+    "item": "gct_additions:balanced_matrix_ingot",
+    "count": 9
+  },
+  "group": "gct_additions"
+}

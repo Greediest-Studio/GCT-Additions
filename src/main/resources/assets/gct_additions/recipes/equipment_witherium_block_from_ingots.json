@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "III",
+    "III",
+    "III"
+  ],
+  "key": {
+    "I": {
+      "item": "gct_additions:equipment_witherium_ingot"
+    }
+  },
+  "result": {
+    "item": "gct_additions:equipment_witherium_block",
+    "count": 1
+  },
+  "group": "gct_additions"
+}

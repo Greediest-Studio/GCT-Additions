@@ -12,15 +12,19 @@ import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
 public class InfoItem extends Item {
-    private final String tooltip;
+    private final String[] tooltips;
     private final boolean glowing;
 
     public InfoItem(String name) {
-        this(name, 64, 0, null, false);
+        this(name, 64, 0, false);
     }
 
     public InfoItem(String name, int maxStackSize, int maxDamage, String tooltip, boolean glowing) {
-        this.tooltip = tooltip;
+        this(name, maxStackSize, maxDamage, glowing, tooltip == null ? new String[0] : new String[] { tooltip });
+    }
+
+    public InfoItem(String name, int maxStackSize, int maxDamage, boolean glowing, String... tooltips) {
+        this.tooltips = tooltips;
         this.glowing = glowing;
         setMaxDamage(maxDamage);
         setMaxStackSize(maxStackSize);
@@ -32,8 +36,12 @@ public class InfoItem extends Item {
     @Override
     public void addInformation(ItemStack stack, World world, List<String> tooltip, ITooltipFlag flag) {
         super.addInformation(stack, world, tooltip, flag);
-        if (this.tooltip != null && !this.tooltip.isEmpty()) {
-            tooltip.add(this.tooltip);
+        if (this.tooltips != null) {
+            for (String line : this.tooltips) {
+                if (line != null && !line.isEmpty()) {
+                    tooltip.add(line);
+                }
+            }
         }
     }
 

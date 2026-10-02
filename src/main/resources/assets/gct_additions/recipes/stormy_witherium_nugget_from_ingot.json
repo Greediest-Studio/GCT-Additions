@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "gct_additions:stormy_witherium_ingot"
+    }
+  ],
+  "result": {
+    "item": "gct_additions:stormy_witherium_nugget",
+    "count": 9
+  },
+  "group": "gct_additions"
+}

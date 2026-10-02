@@ -1,5 +1,6 @@
 package com.shiver.gct_additions.misc.registry;
 
+import com.shiver.gct_additions.common.blocks.GctAdditionsAddonBlocks;
 import com.shiver.gct_additions.common.blocks.GctAdditionsBlocks;
 import com.shiver.gct_additions.common.blocks.MachineBlock;
 import com.shiver.gct_additions.client.GctAdditionsModels;
@@ -34,6 +35,7 @@ public final class GctAdditionsContent {
 
     public static void registerBlocks(RegistryEvent.Register<Block> event) {
         GctAdditionsBlocks.registerBlocks(event);
+        GctAdditionsAddonBlocks.registerBlocks(event);
         GctAdditionsDimensions.registerBlocks(event);
         event.getRegistry().registerAll(
                 ATOMIC_VIBRATOR,
@@ -44,7 +46,9 @@ public final class GctAdditionsContent {
 
     public static void registerItems(RegistryEvent.Register<Item> event) {
         GctAdditionsBlocks.registerItems(event);
+        GctAdditionsAddonBlocks.registerItems(event);
         GctAdditionsItems.registerItems(event);
+        GctAdditionsAddonItems.registerItems(event);
         GctAdditionsDimensions.registerItems(event);
         event.getRegistry().registerAll(
                 itemBlock(ATOMIC_VIBRATOR),
@@ -56,7 +60,9 @@ public final class GctAdditionsContent {
     @SideOnly(Side.CLIENT)
     public static void registerModels(ModelRegistryEvent event) {
         GctAdditionsBlocks.registerModels(event);
+        GctAdditionsAddonBlocks.registerModels(event);
         GctAdditionsItems.registerModels();
+        GctAdditionsAddonItems.registerModels();
         GctAdditionsDimensions.registerModels(event);
 
         GctAdditionsModels.block(ATOMIC_VIBRATOR);

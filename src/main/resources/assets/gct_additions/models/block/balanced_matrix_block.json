@@ -1,0 +1,6 @@
+{
+    "parent":  "block/cube_all",
+    "textures":  {
+                     "all":  "gct_additions:blocks/balanced_matrix_block"
+                 }
+}

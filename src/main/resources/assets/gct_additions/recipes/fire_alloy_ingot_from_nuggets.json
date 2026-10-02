@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "NNN",
+    "NNN",
+    "NNN"
+  ],
+  "key": {
+    "N": {
+      "item": "gct_additions:fire_alloy_nugget"
+    }
+  },
+  "result": {
+    "item": "gct_additions:fire_alloy_ingot",
+    "count": 1
+  },
+  "group": "gct_additions"
+}

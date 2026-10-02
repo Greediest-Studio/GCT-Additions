@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "gct_additions:ruled_draconium_ingot"
+    }
+  ],
+  "result": {
+    "item": "gct_additions:ruled_draconium_nugget",
+    "count": 9
+  },
+  "group": "gct_additions"
+}

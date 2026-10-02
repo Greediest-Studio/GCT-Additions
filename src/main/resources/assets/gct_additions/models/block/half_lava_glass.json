@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "gct_additions:blocks/lava_still",
+    "up": "gct_additions:blocks/lava_still",
+    "north": "gct_additions:blocks/lava_still",
+    "east": "gct_additions:blocks/lava_still",
+    "south": "gct_additions:blocks/lava_still",
+    "west": "gct_additions:blocks/lava_still",
+    "particle": "gct_additions:blocks/lava_still"
+  }
+}

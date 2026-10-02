@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "gct_additions:equipment_witherium_block"
+    }
+  ],
+  "result": {
+    "item": "gct_additions:equipment_witherium_ingot",
+    "count": 9
+  },
+  "group": "gct_additions"
+}
