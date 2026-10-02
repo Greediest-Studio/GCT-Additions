@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "gct_additions:blocks/crystalsandstone_bottom",
+    "particle": "gct_additions:blocks/crystalsandstone_bottom"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "gct_additions:blocks/deepslate",
+    "up": "gct_additions:blocks/deepslate",
+    "north": "gct_additions:blocks/deepslate",
+    "east": "gct_additions:blocks/deepslate",
+    "south": "gct_additions:blocks/deepslate",
+    "west": "gct_additions:blocks/deepslate",
+    "particle": "gct_additions:blocks/deepslate"
+  }
+}

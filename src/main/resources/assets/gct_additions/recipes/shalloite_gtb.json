@@ -1,0 +1,26 @@
+{
+  "group": "gct_additions",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "01",
+    "23"
+  ],
+  "key": {
+    "0": {
+      "item": "gct_additions:shalloite"
+    },
+    "1": {
+      "item": "gct_additions:shalloite"
+    },
+    "2": {
+      "item": "gct_additions:shalloite"
+    },
+    "3": {
+      "item": "gct_additions:shalloite"
+    }
+  },
+  "result": {
+    "item": "gct_additions:shalloite_block",
+    "count": 1
+  }
+}

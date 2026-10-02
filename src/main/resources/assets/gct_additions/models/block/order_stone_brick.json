@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "gct_additions:blocks/order_stonebrick",
+    "up": "gct_additions:blocks/order_stonebrick",
+    "north": "gct_additions:blocks/order_stonebrick",
+    "east": "gct_additions:blocks/order_stonebrick",
+    "south": "gct_additions:blocks/order_stonebrick",
+    "west": "gct_additions:blocks/order_stonebrick",
+    "particle": "gct_additions:blocks/order_stonebrick"
+  }
+}

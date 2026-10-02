@@ -1,0 +1,115 @@
+{
+  "deepslate_break": {
+    "category": "block",
+    "sounds": [
+      {
+        "name": "gct_additions:break",
+        "stream": false
+      }
+    ]
+  },
+  "deepslate_step": {
+    "category": "block",
+    "sounds": [
+      {
+        "name": "gct_additions:step",
+        "stream": false
+      }
+    ]
+  },
+  "deepslate_place": {
+    "category": "block",
+    "sounds": [
+      {
+        "name": "gct_additions:place",
+        "stream": false
+      }
+    ]
+  },
+  "remnant_ambient": {
+    "category": "master",
+    "sounds": [
+      {
+        "name": "gct_additions:remnant_scream",
+        "stream": false
+      }
+    ]
+  },
+  "zjarugoth_roar": {
+    "category": "master",
+    "sounds": [
+      {
+        "name": "gct_additions:zjarugoth_roar",
+        "stream": false
+      }
+    ]
+  },
+  "shoggoth_ambient": {
+    "category": "master",
+    "sounds": [
+      {
+        "name": "gct_additions:idle1",
+        "stream": false
+      },
+      {
+        "name": "gct_additions:idle2",
+        "stream": false
+      },
+      {
+        "name": "gct_additions:idle3",
+        "stream": false
+      },
+      {
+        "name": "gct_additions:idle4",
+        "stream": false
+      },
+      {
+        "name": "gct_additions:idle5",
+        "stream": false
+      }
+    ]
+  },
+  "chant_abyss": {
+    "category": "master",
+    "sounds": [
+      {
+        "name": "gct_additions:chant",
+        "stream": false
+      }
+    ]
+  },
+  "shoggoth_death": {
+    "category": "master",
+    "sounds": [
+      {
+        "name": "gct_additions:death",
+        "stream": false
+      }
+    ]
+  },
+  "shoggoth_hurt": {
+    "category": "master",
+    "sounds": [
+      {
+        "name": "gct_additions:hurt1",
+        "stream": false
+      },
+      {
+        "name": "gct_additions:hurt2",
+        "stream": false
+      },
+      {
+        "name": "gct_additions:hurt3",
+        "stream": false
+      },
+      {
+        "name": "gct_additions:hurt4",
+        "stream": false
+      },
+      {
+        "name": "gct_additions:hurt5",
+        "stream": false
+      }
+    ]
+  }
+}

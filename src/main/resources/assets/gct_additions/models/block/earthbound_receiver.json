@@ -1,0 +1,11 @@
+{
+  "parent": "gct_additions:custom/earthboundreceiver",
+  "textures": {
+    "all": "gct_additions:blocks/alfheimportal",
+    "particle": "gct_additions:blocks/alfheimportal",
+    "0": "gct_additions:blocks/log",
+    "1": "gct_additions:blocks/mud",
+    "2": "gct_additions:blocks/alfheimportal",
+    "missing": "gct_additions:blocks/alfheimportal"
+  }
+}

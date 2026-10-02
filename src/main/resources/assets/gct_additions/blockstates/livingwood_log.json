@@ -1,0 +1,31 @@
+{
+  "variants": {
+    "normal": {
+      "model": "gct_additions:livingwood_log"
+    },
+    "facing=south": {
+      "model": "gct_additions:livingwood_log"
+    },
+    "facing=north": {
+      "model": "gct_additions:livingwood_log"
+    },
+    "facing=east": {
+      "model": "gct_additions:livingwood_log",
+      "x": 90
+    },
+    "facing=west": {
+      "model": "gct_additions:livingwood_log",
+      "x": 90
+    },
+    "facing=up": {
+      "model": "gct_additions:livingwood_log",
+      "x": 90,
+      "y": 90
+    },
+    "facing=down": {
+      "model": "gct_additions:livingwood_log",
+      "x": 90,
+      "y": 90
+    }
+  }
+}

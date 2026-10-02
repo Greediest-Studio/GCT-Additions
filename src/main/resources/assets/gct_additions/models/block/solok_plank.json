@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "gct_additions:blocks/solok_plank",
+    "up": "gct_additions:blocks/solok_plank",
+    "north": "gct_additions:blocks/solok_plank",
+    "east": "gct_additions:blocks/solok_plank",
+    "south": "gct_additions:blocks/solok_plank",
+    "west": "gct_additions:blocks/solok_plank",
+    "particle": "gct_additions:blocks/solok_plank"
+  }
+}

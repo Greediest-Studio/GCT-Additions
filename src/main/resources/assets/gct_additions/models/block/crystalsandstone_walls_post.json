@@ -1,0 +1,7 @@
+{
+  "parent": "block/wall_post",
+  "textures": {
+    "wall": "gct_additions:blocks/crystalsandstone_bottom",
+    "particle": "gct_additions:blocks/crystalsandstone_bottom"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "parent": "block/inner_stairs",
+  "textures": {
+    "bottom": "gct_additions:blocks/polarisite_brick_dark",
+    "top": "gct_additions:blocks/polarisite_brick_dark",
+    "side": "gct_additions:blocks/polarisite_brick_dark"
+  }
+}

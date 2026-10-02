@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "variant=default": {
+      "model": "gct_additions:primordial_stonebrick_slab_double"
+    }
+  }
+}

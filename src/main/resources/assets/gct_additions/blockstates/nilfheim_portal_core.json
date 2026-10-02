@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "active=false": { "model": "gct_additions:nilfheim/nilfheim_portal_core" },
+    "active=true": { "model": "gct_additions:nilfheim/nilfheim_portal_core_active" },
+    "inventory": { "model": "gct_additions:nilfheim/nilfheim_portal_core" }
+  }
+}

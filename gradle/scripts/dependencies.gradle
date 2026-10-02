@@ -73,8 +73,10 @@ dependencies {
     // If you wish to exclude transitive dependencies in the described dependencies
     // Use a closure as such:
     // implementation ('com.google.code.gson:gson:2.8.6') {
-    //     transitive = false
-    // }
+    // External dependencies for GCT-Additions
+    implementation rfg.deobf("curse.maven:bookshelf-228525:2836960")
+    implementation rfg.deobf("curse.maven:gamestage-268655:2951840")
+    compileOnly rfg.deobf("curse.maven:AbyssalCraft-53686:6922627")
 }
 
 // Need reobfJar to use uber jars, so dependencies that are shaded in are present

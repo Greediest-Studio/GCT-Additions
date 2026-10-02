@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "gct_additions:blocks/reverser",
+    "up": "gct_additions:blocks/reverser",
+    "north": "gct_additions:blocks/reverser",
+    "east": "gct_additions:blocks/reverser",
+    "south": "gct_additions:blocks/reverser",
+    "west": "gct_additions:blocks/reverser",
+    "particle": "gct_additions:blocks/reverser"
+  }
+}

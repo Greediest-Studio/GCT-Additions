@@ -1,0 +1,8 @@
+{
+  "parent": "block/stairs",
+  "textures": {
+    "bottom": "gct_additions:blocks/solok_plank",
+    "top": "gct_additions:blocks/solok_plank",
+    "side": "gct_additions:blocks/solok_plank"
+  }
+}

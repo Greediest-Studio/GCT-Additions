@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "half=bottom,variant=default": {
+      "model": "gct_additions:mana_slab"
+    },
+    "half=top,variant=default": {
+      "model": "gct_additions:mana_slab_top"
+    }
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "variant=default": {
+      "model": "gct_additions:polarisite_dark_slab_double"
+    }
+  }
+}

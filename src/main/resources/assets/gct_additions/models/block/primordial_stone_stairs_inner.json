@@ -1,0 +1,8 @@
+{
+  "parent": "block/inner_stairs",
+  "textures": {
+    "bottom": "gct_additions:blocks/primordial_stone",
+    "top": "gct_additions:blocks/primordial_stone",
+    "side": "gct_additions:blocks/primordial_stone"
+  }
+}

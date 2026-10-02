@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "variant=default": {
+      "model": "gct_additions:evileye_slab_double"
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "gct_additions:blocks/mana_wood_top",
+    "up": "gct_additions:blocks/mana_wood_top",
+    "north": "gct_additions:blocks/mana_wood",
+    "east": "gct_additions:blocks/mana_wood",
+    "south": "gct_additions:blocks/mana_wood",
+    "west": "gct_additions:blocks/mana_wood",
+    "particle": "gct_additions:blocks/mana_wood_top"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "gct_additions:blocks/apocalypse_bomb",
+    "up": "gct_additions:blocks/apocalypse_bomb",
+    "north": "gct_additions:blocks/apocalypse_bomb",
+    "east": "gct_additions:blocks/apocalypse_bomb",
+    "south": "gct_additions:blocks/apocalypse_bomb",
+    "west": "gct_additions:blocks/apocalypse_bomb",
+    "particle": "gct_additions:blocks/apocalypse_bomb"
+  }
+}

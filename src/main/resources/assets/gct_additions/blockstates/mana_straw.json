@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "type=dandelion": {
+      "model": "gct_additions:mana_straw"
+    }
+  }
+}

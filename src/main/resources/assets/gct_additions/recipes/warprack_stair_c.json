@@ -1,0 +1,33 @@
+{
+  "group": "gct_additions",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "0  ",
+    "34 ",
+    "678"
+  ],
+  "key": {
+    "0": {
+      "item": "gct_additions:warprack"
+    },
+    "3": {
+      "item": "gct_additions:warprack"
+    },
+    "4": {
+      "item": "gct_additions:warprack"
+    },
+    "6": {
+      "item": "gct_additions:warprack"
+    },
+    "7": {
+      "item": "gct_additions:warprack"
+    },
+    "8": {
+      "item": "gct_additions:warprack"
+    }
+  },
+  "result": {
+    "item": "gct_additions:warprack_stair",
+    "count": 6
+  }
+}

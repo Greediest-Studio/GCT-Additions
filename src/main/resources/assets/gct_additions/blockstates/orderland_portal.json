@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "axis=z": {
+      "model": "gct_additions:orderland_portal_ew"
+    },
+    "axis=x": {
+      "model": "gct_additions:orderland_portal_ns"
+    },
+    "inventory": {
+      "model": "gct_additions:orderland_portal_ns"
+    }
+  }
+}

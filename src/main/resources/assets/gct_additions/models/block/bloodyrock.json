@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "gct_additions:blocks/bloodyrock",
+    "up": "gct_additions:blocks/bloodyrock",
+    "north": "gct_additions:blocks/bloodyrock",
+    "east": "gct_additions:blocks/bloodyrock",
+    "south": "gct_additions:blocks/bloodyrock",
+    "west": "gct_additions:blocks/bloodyrock",
+    "particle": "gct_additions:blocks/bloodyrock"
+  }
+}

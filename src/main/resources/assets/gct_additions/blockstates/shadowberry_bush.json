@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "age=0": { "model": "gct_additions:nilfheim/shadowberry_bush" },
+    "age=1": { "model": "gct_additions:nilfheim/shadowberry_bush" },
+    "age=2": { "model": "gct_additions:nilfheim/shadowberry_bush" },
+    "age=3": { "model": "gct_additions:nilfheim/shadowberry_bush" },
+    "age=4": { "model": "gct_additions:nilfheim/shadowberry_bush_grown" },
+    "inventory": { "model": "gct_additions:nilfheim/shadowberry_bush" }
+  }
+}

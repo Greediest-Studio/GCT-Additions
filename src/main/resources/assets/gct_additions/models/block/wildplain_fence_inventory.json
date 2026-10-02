@@ -1,0 +1,7 @@
+{
+  "parent": "block/fence_inventory",
+  "textures": {
+    "texture": "gct_additions:blocks/wildplain_plank",
+    "particle": "gct_additions:blocks/wildplain_plank"
+  }
+}

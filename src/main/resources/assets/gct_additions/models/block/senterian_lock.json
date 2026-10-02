@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "gct_additions:blocks/senterianbricks_lock",
+    "up": "gct_additions:blocks/senterianbricks_lock",
+    "north": "gct_additions:blocks/senterianbricks",
+    "east": "gct_additions:blocks/senterianbricks",
+    "south": "gct_additions:blocks/senterianbricks",
+    "west": "gct_additions:blocks/senterianbricks",
+    "particle": "gct_additions:blocks/senterianbricks_lock"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "variant=default": {
+      "model": "gct_additions:wildplain_slab_double"
+    }
+  }
+}

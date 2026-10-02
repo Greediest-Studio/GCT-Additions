@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "gct_additions:blocks/apocalypse_altar_base",
+    "up": "gct_additions:blocks/apocalypse_altar_base",
+    "north": "gct_additions:blocks/apocalypse_altar_base",
+    "east": "gct_additions:blocks/apocalypse_altar_base",
+    "south": "gct_additions:blocks/apocalypse_altar_base",
+    "west": "gct_additions:blocks/apocalypse_altar_base",
+    "particle": "gct_additions:blocks/apocalypse_altar_base"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "parent": "block/fence_post",
+  "textures": {
+    "texture": "gct_additions:blocks/solok_plank",
+    "particle": "gct_additions:blocks/solok_plank"
+  }
+}

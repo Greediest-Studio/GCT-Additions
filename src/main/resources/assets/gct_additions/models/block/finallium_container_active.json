@@ -1,0 +1,11 @@
+{
+  "parent": "gct_additions:custom/finallium_container_active",
+  "textures": {
+    "all": "gct_additions:blocks/finallium_block",
+    "particle": "gct_additions:blocks/finallium_block",
+    "3": "gct_additions:blocks/finallium_block",
+    "4": "gct_additions:blocks/ordered_metal_block",
+    "5": "gct_additions:blocks/shalloite_block",
+    "6": "gct_additions:blocks/ordered_core"
+  }
+}

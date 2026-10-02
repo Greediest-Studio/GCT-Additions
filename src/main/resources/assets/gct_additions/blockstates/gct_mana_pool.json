@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "tier=joetunheim": { "model": "gct_additions:joetunheim_mana_pool" },
+    "tier=nidavellir": { "model": "gct_additions:nidavellir_mana_pool" },
+    "tier=vanaheim": { "model": "gct_additions:vanaheim_mana_pool" }
+  }
+}

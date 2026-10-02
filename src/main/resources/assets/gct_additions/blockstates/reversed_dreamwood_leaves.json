@@ -1,0 +1,19 @@
+{
+    "variants":  {
+                     "check_decay=true,decayable=true":  {
+                                                             "model":  "gct_additions:reversed_dreamwood_leaves"
+                                                         },
+                     "check_decay=false,decayable=true":  {
+                                                              "model":  "gct_additions:reversed_dreamwood_leaves"
+                                                          },
+                     "check_decay=true,decayable=false":  {
+                                                              "model":  "gct_additions:reversed_dreamwood_leaves"
+                                                          },
+                     "check_decay=false,decayable=false":  {
+                                                               "model":  "gct_additions:reversed_dreamwood_leaves"
+                                                           },
+                     "normal":  {
+                                    "model":  "gct_additions:reversed_dreamwood_leaves"
+                                }
+                 }
+}

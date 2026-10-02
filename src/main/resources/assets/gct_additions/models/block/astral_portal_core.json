@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "gct_additions:blocks/marble_runed",
+    "up": "gct_additions:blocks/marble_runed",
+    "north": "gct_additions:blocks/marble_runed",
+    "east": "gct_additions:blocks/marble_runed",
+    "south": "gct_additions:blocks/marble_runed",
+    "west": "gct_additions:blocks/marble_runed",
+    "particle": "gct_additions:blocks/marble_runed"
+  }
+}

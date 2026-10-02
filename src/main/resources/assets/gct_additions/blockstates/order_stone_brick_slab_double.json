@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "variant=default": {
+      "model": "gct_additions:order_stone_brick_slab_double"
+    }
+  }
+}

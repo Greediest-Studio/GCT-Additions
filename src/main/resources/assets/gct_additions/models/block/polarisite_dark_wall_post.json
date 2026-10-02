@@ -1,0 +1,7 @@
+{
+  "parent": "block/wall_post",
+  "textures": {
+    "wall": "gct_additions:blocks/polarisite_brick_dark",
+    "particle": "gct_additions:blocks/polarisite_brick_dark"
+  }
+}
