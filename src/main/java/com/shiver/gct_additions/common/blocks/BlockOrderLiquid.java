@@ -37,7 +37,7 @@ public class BlockOrderLiquid extends BlockFluidClassic {
                 .setDensity(1000)
                 .setViscosity(1000)
                 .setGaseous(false);
-        return FluidRegistry.registerFluid(fluid) ? fluid : FluidRegistry.getFluid(fluid.getName());
+        return com.shiver.gct_additions.misc.registry.GctAdditionsFluidRegistry.register(fluid);
     }
 
     @SideOnly(Side.CLIENT)

@@ -45,7 +45,7 @@ public class BlockLumixeium extends BlockFluidClassic {
                 .setDensity(950)
                 .setViscosity(500)
                 .setGaseous(true);
-        return FluidRegistry.registerFluid(fluid) ? fluid : FluidRegistry.getFluid(fluid.getName());
+        return com.shiver.gct_additions.misc.registry.GctAdditionsFluidRegistry.register(fluid);
     }
 
     @Override

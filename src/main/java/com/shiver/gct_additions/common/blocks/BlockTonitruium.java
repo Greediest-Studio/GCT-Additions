@@ -45,7 +45,7 @@ public class BlockTonitruium extends BlockFluidClassic {
                 .setDensity(980)
                 .setViscosity(3500)
                 .setGaseous(false);
-        return FluidRegistry.registerFluid(fluid) ? fluid : FluidRegistry.getFluid(fluid.getName());
+        return com.shiver.gct_additions.misc.registry.GctAdditionsFluidRegistry.register(fluid);
     }
 
     @Override

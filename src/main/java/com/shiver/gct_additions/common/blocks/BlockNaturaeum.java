@@ -44,7 +44,7 @@ public class BlockNaturaeum extends BlockFluidClassic {
                 .setDensity(1150)
                 .setViscosity(1800)
                 .setGaseous(false);
-        return FluidRegistry.registerFluid(fluid) ? fluid : FluidRegistry.getFluid(fluid.getName());
+        return com.shiver.gct_additions.misc.registry.GctAdditionsFluidRegistry.register(fluid);
     }
 
     @Override

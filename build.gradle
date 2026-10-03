@@ -245,7 +245,7 @@ jar {
             attribute_map['FMLAT'] = propertyString('access_transformer_locations')
         }
         def mixinConfigs = propertyStringList('mixin_configs')
-        if (!mixinConfigs.isEmpty()) {
+        if (propertyBool('use_mixins') && !mixinConfigs.isEmpty()) {
             attribute_map['MixinConfigs'] = mixinConfigs.join(',')
         }
         def mixinConnectorClass = propertyString('mixin_connector_class')

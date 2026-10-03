@@ -44,7 +44,7 @@ public class BlockNoxexeum extends BlockFluidClassic {
                 .setDensity(2560)
                 .setViscosity(5000)
                 .setGaseous(false);
-        return FluidRegistry.registerFluid(fluid) ? fluid : FluidRegistry.getFluid(fluid.getName());
+        return com.shiver.gct_additions.misc.registry.GctAdditionsFluidRegistry.register(fluid);
     }
 
     @Override
