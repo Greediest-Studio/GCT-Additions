@@ -144,6 +144,7 @@ public static class WorldProviderMod extends WorldProvider {
   }
 
   public static class TeleporterDimensionMod extends Teleporter {
+    private static final int PORTAL_SEARCH_RADIUS = 32;
     private Vec3d lastPortalVec;
 
     private EnumFacing teleportDirection;
@@ -337,7 +338,6 @@ public static class WorldProviderMod extends WorldProvider {
     }
 
     public boolean placeInExistingPortal(Entity entityIn, float rotationYaw) {
-      int i = 128;
       double d0 = -1.0D;
       int j = MathHelper.floor(entityIn.posX);
       int k = MathHelper.floor(entityIn.posZ);
@@ -347,13 +347,13 @@ public static class WorldProviderMod extends WorldProvider {
       if (this.destinationCoordinateCache.containsKey(l)) {
         Teleporter.PortalPosition teleporter$portalposition = (Teleporter.PortalPosition)this.destinationCoordinateCache.get(l);
         d0 = 0.0D;
-        Teleporter.PortalPosition portalPosition1 = teleporter$portalposition;
+        blockpos = teleporter$portalposition;
         teleporter$portalposition.lastUpdateTime = this.world.getTotalWorldTime();
         flag = false;
       } else {
         BlockPos blockpos3 = new BlockPos(entityIn);
-        for (int i1 = -128; i1 <= 128; i1++) {
-          for (int j1 = -128; j1 <= 128; j1++) {
+        for (int i1 = -PORTAL_SEARCH_RADIUS; i1 <= PORTAL_SEARCH_RADIUS; i1++) {
+          for (int j1 = -PORTAL_SEARCH_RADIUS; j1 <= PORTAL_SEARCH_RADIUS; j1++) {
             BlockPos blockpos1 = blockpos3.add(i1, this.world.getActualHeight() - 1 - blockpos3.getY(), j1);
             for (; blockpos1.getY() >= 0; blockpos1 = blockpos1.down()) {
               BlockPos blockpos2 = blockpos1.down();
@@ -547,7 +547,12 @@ public static class WorldProviderMod extends WorldProvider {
             .getWidth()));
       double d2 = MathHelper.pct(entity.posY - 1.0D, bph.getFrontTopLeft().getY(), (bph
           .getFrontTopLeft().getY() - bph.getHeight()));
-      return new WorldEverheaven.TeleporterDimensionMod(entity.getServer().getWorld(dimid), new Vec3d(d1, d2, 0.0D), bph.getForwards());
+      WorldServer targetWorld = entity.getServer().getWorld(dimid);
+      if (targetWorld == null) {
+        DimensionManager.initDimension(dimid);
+        targetWorld = DimensionManager.getWorld(dimid);
+      }
+      return new WorldEverheaven.TeleporterDimensionMod(targetWorld, new Vec3d(d1, d2, 0.0D), bph.getForwards());
     }
 
     public static class Size {
