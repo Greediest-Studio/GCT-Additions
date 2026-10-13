@@ -213,7 +213,8 @@ public final class GctAdditionsOreDictionary {
             entry("nuggetApocalypsium", "apocalypsium_nugget"),
             entry("nuggetSnowingium", "snowingium_nugget"),
             entry("slimeball", "shoggoth_slimeball"),
-            entry("soulBotanical", "botanical_soul")
+            entry("soulBotanical", "botanical_soul"),
+            entry("blockSanite", "sanite_block")
     );
 
     private GctAdditionsOreDictionary() {
