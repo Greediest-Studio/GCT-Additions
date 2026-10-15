@@ -44,11 +44,18 @@ public final class StructureGenerationHelper {
   private StructureGenerationHelper() {}
 
   static int findSurfaceY(World world, int x, int z, boolean netherStyle) {
+    if (!world.isBlockLoaded(new BlockPos(x, 0, z))) {
+      return -1;
+    }
     if (netherStyle) {
       return findNetherSurfaceY(world, x, z);
     }
 
-    BlockPos.MutableBlockPos pos = new BlockPos.MutableBlockPos(x, 255, z);
+    int topY = world.getHeight(new BlockPos(x, 0, z)).getY();
+    if (topY <= 0) {
+      return -1;
+    }
+    BlockPos.MutableBlockPos pos = new BlockPos.MutableBlockPos(x, topY, z);
     while (pos.getY() > 0 && !isSolid(world, pos)) {
       pos.setY(pos.getY() - 1);
     }
@@ -130,6 +137,9 @@ public final class StructureGenerationHelper {
   }
 
   private static int findNetherSurfaceY(World world, int x, int z) {
+    if (!world.isBlockLoaded(new BlockPos(x, 0, z))) {
+      return -1;
+    }
     BlockPos.MutableBlockPos pos = new BlockPos.MutableBlockPos(x, 255, z);
     boolean foundAirPocket = false;
     while (pos.getY() > 0) {
@@ -282,8 +292,15 @@ public final class StructureGenerationHelper {
   @Nullable
   private static NBTTagCompound readTemplateNbt(ResourceLocation templateId) {
     String path = "/assets/" + templateId.getNamespace() + "/structures/" + templateId.getPath() + ".nbt";
-    try (InputStream inputStream = MinecraftServer.class.getResourceAsStream(path)) {
-      return inputStream == null ? null : CompressedStreamTools.readCompressed(inputStream);
+    InputStream inputStream = StructureGenerationHelper.class.getResourceAsStream(path);
+    if (inputStream == null) {
+      inputStream = MinecraftServer.class.getResourceAsStream(path);
+    }
+    if (inputStream == null) {
+      return null;
+    }
+    try (InputStream stream = inputStream) {
+      return CompressedStreamTools.readCompressed(stream);
     } catch (IOException | RuntimeException e) {
       GctAdditions.LOGGER.warn("Unable to read structure template palette: {}", templateId, e);
       return null;

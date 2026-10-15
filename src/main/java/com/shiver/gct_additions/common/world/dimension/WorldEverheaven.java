@@ -748,13 +748,27 @@ public static class WorldProviderMod extends WorldProvider {
           public boolean generate(World worldIn, Random rand, BlockPos position) {
             float f = (rand.nextInt(4) + 5);
             for (int i = 0; f > 1.5F; i--) {
-              for (int j = MathHelper.floor(-f); j <= MathHelper.ceil(f); j++) {
-                for (int k = MathHelper.floor(-f); k <= MathHelper.ceil(f); k++) {
-                  if ((j * j + k * k) <= (f + 1.0F) * (f + 1.0F))
-                    setBlockAndNotifyAdequately(worldIn, position.add(j, i, k), WorldEverheaven.ChunkProviderModded.STONE);
+              int startJ = MathHelper.floor(-f);
+              int endJ = MathHelper.ceil(f);
+              int startK = MathHelper.floor(-f);
+              int endK = MathHelper.ceil(f);
+              float maxDistSq = (f + 1.0F) * (f + 1.0F);
+              int y = position.getY() + i;
+              if (y < 1 || y > 255) {
+                f = (float)(f - (rand.nextInt(2) + 0.5D));
+                continue;
+              }
+              for (int j = startJ; j <= endJ; j++) {
+                for (int k = startK; k <= endK; k++) {
+                  if ((j * j + k * k) <= maxDistSq) {
+                    BlockPos targetPos = position.add(j, i, k);
+                    if (worldIn.isBlockLoaded(targetPos)) {
+                      setBlockAndNotifyAdequately(worldIn, targetPos, WorldEverheaven.ChunkProviderModded.STONE);
+                    }
+                  }
                 }
               }
-              f = (float)(f - rand.nextInt(2) + 0.5D);
+              f = (float)(f - (rand.nextInt(2) + 0.5D));
             }
             return true;
           }
@@ -795,8 +809,6 @@ public static class WorldProviderMod extends WorldProvider {
       biome.decorate(this.world, this.random, new BlockPos(i, 0, j));
       MinecraftForge.EVENT_BUS
         .post((Event)new DecorateBiomeEvent.Post(this.world, this.random, blockpos));
-      if (TerrainGen.populate(this, this.world, this.random, x, z, false, PopulateChunkEvent.Populate.EventType.ANIMALS))
-        WorldEntitySpawner.performWorldGenSpawning(this.world, biome, i + 8, j + 8, 16, 16, this.random);
       ForgeEventFactory.onChunkPopulate(false, this, this.world, this.random, x, z, false);
       BlockFalling.fallInstantly = false;
     }

@@ -30,6 +30,7 @@ public class BiomeEverheavenWaste extends Biome {
     this.decorator.cactiPerChunk = 0;
     this.decorator.sandPatchesPerChunk = 0;
     this.decorator.gravelPatchesPerChunk = 0;
+    this.decorator.generateFalls = false;
     this.spawnableMonsterList.clear();
     this.spawnableCreatureList.clear();
     this.spawnableWaterCreatureList.clear();

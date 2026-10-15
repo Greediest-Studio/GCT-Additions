@@ -14,7 +14,7 @@ import net.minecraft.world.gen.IChunkGenerator;
 public abstract class TemplateStructureFeature implements StructureFeature {
     protected static final int CHANCE_DENOMINATOR = 1_000_000;
     private static final int PRIMARY_ORIGIN_ATTEMPTS = 6;
-    private static final int RELOCATION_ATTEMPTS = 12;
+    private static final int RELOCATION_ATTEMPTS = 3;
     private static final int RELOCATION_ORIGIN_ATTEMPTS = 3;
     private static final int RELOCATION_CHUNK_RADIUS = 2;
 
@@ -104,6 +104,9 @@ public abstract class TemplateStructureFeature implements StructureFeature {
     }
 
     private boolean tryGenerateInChunk(Random random, int chunkX, int chunkZ, World world, int originAttempts) {
+        if (!isChunkAreaLoaded(world, chunkX, chunkZ)) {
+            return false;
+        }
         for (int i = 0; i < originAttempts; i++) {
             BlockPos origin = findOrigin(random, chunkX, chunkZ, world);
             if (origin != null && canGenerateAt(world, origin)

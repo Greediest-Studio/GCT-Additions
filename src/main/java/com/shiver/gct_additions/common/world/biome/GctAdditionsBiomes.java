@@ -52,7 +52,8 @@ public final class GctAdditionsBiomes {
         BiomeDictionary.addTypes(BiomeBloodyplain.biome, BiomeDictionary.Type.WASTELAND);
         BiomeDictionary.addTypes(BiomeCurruptplain.biome, BiomeDictionary.Type.WASTELAND);
         BiomeDictionary.addTypes(BiomeManaForest.biome, BiomeDictionary.Type.FOREST);
-        BiomeDictionary.addTypes(BiomeEverheavenWaste.biome, BiomeDictionary.Type.WASTELAND);
+        BiomeDictionary.addTypes(BiomeEverheavenWaste.biome, BiomeDictionary.Type.WASTELAND,
+                BiomeDictionary.Type.VOID, BiomeDictionary.Type.DEAD);
         BiomeDictionary.addTypes(BiomeAlfheimPlain.biome, BiomeDictionary.Type.PLAINS, BiomeDictionary.Type.MAGICAL);
         BiomeDictionary.addTypes(BiomeManaForestHill.biome, BiomeDictionary.Type.FOREST);
         BiomeDictionary.addTypes(BiomeAlfheimPlainHill.biome, BiomeDictionary.Type.PLAINS, BiomeDictionary.Type.MAGICAL);
