@@ -42,6 +42,9 @@ public class AirborneTemplateStructure extends TemplateStructureFeature {
         int x = StructureGenerationHelper.randomChunkX(random, chunkX);
         int z = StructureGenerationHelper.randomChunkZ(random, chunkZ);
         int surfaceY = StructureGenerationHelper.findSurfaceY(world, x, z, false);
+        if (surfaceY < 0) {
+            return null;
+        }
         if (useSolidSurfaceY) {
             surfaceY++;
         }

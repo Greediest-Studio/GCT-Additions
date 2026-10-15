@@ -68,14 +68,23 @@ public class TeleporterDirect extends Teleporter {
 
   public static BlockPos findSafeTeleportPos(WorldServer world, BlockPos preferred) {
     BlockPos clamped = clampToWorld(world, preferred);
-    BlockPos found = searchSafePos(world, clamped, SEARCH_RADIUS);
+    if (isSafeTeleportPos(world, clamped)) {
+      return clamped;
+    }
+    BlockPos found = searchSafePos(world, clamped, 16);
     if (found != null) {
       return found;
     }
     BlockPos top = world.getTopSolidOrLiquidBlock(new BlockPos(clamped.getX(), 0, clamped.getZ()));
-    found = searchSafePos(world, clampToWorld(world, top), SEARCH_RADIUS);
-    if (found != null) {
-      return found;
+    if (top.getY() > 0) {
+      BlockPos topClamped = clampToWorld(world, top);
+      if (isSafeTeleportPos(world, topClamped)) {
+        return topClamped;
+      }
+      found = searchSafePos(world, topClamped, 8);
+      if (found != null) {
+        return found;
+      }
     }
     return createSafePlatform(world, clamped);
   }
@@ -90,6 +99,9 @@ public class TeleporterDirect extends Teleporter {
   }
 
   private static BlockPos searchSafePos(WorldServer world, BlockPos center, int radius) {
+    int maxY = Math.min(world.getActualHeight() - 2, center.getY() + radius);
+    int minY = Math.max(1, center.getY() - radius);
+    BlockPos.MutableBlockPos mpos = new BlockPos.MutableBlockPos();
     for (int r = 0; r <= radius; r++) {
       for (int dx = -r; dx <= r; dx++) {
         for (int dz = -r; dz <= r; dz++) {
@@ -98,18 +110,13 @@ public class TeleporterDirect extends Teleporter {
           }
           int x = center.getX() + dx;
           int z = center.getZ() + dz;
-          int maxY = Math.min(world.getActualHeight() - 2, center.getY() + radius);
-          int minY = Math.max(1, center.getY() - radius);
-          for (int y = maxY; y >= minY; y--) {
-            BlockPos candidate = new BlockPos(x, y, z);
-            if (isSafeTeleportPos(world, candidate)) {
-              return candidate;
-            }
+          if (!world.isBlockLoaded(mpos.setPos(x, 64, z), false)) {
+            continue;
           }
-          for (int y = world.getActualHeight() - 2; y >= 1; y--) {
-            BlockPos candidate = new BlockPos(x, y, z);
-            if (isSafeTeleportPos(world, candidate)) {
-              return candidate;
+          for (int y = maxY; y >= minY; y--) {
+            mpos.setPos(x, y, z);
+            if (isSafeTeleportPos(world, mpos)) {
+              return mpos.toImmutable();
             }
           }
         }
@@ -129,7 +136,7 @@ public class TeleporterDirect extends Teleporter {
 
   private static boolean isEmptyForPlayer(World world, BlockPos pos) {
     IBlockState state = world.getBlockState(pos);
-    return state.getBlock().isAir(state, world, pos);
+    return state.getBlock().isAir(state, world, pos) || state.getBlock() instanceof net.minecraft.block.BlockPortal;
   }
 
   private static BlockPos createSafePlatform(WorldServer world, BlockPos preferred) {

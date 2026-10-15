@@ -52,7 +52,7 @@ public final class StructureGenerationHelper {
     while (pos.getY() > 0 && !isSolid(world, pos)) {
       pos.setY(pos.getY() - 1);
     }
-    return pos.getY() - 1;
+    return isSolid(world, pos) ? pos.getY() - 1 : -1;
   }
 
   public static boolean placeTemplate(World world, Random random, ResourceLocation templateId, BlockPos origin) {
@@ -107,6 +107,9 @@ public final class StructureGenerationHelper {
         .setIgnoreStructureBlock(false)
         .setIgnoreEntities(false);
     StructureBoundingBox bounds = getTemplateBounds(templateId, template, origin, settings);
+    if (bounds.minY < 0 || bounds.maxY > 255) {
+      return false;
+    }
     if (requireLoadedArea) {
       if (!world.isAreaLoaded(bounds, false) || hasGeneratedStructure(world, bounds)) {
         return false;
@@ -122,8 +125,6 @@ public final class StructureGenerationHelper {
 
   private static void addTemplateBlocks(World world, ResourceLocation templateId, Template template, BlockPos origin,
       PlacementSettings settings) {
-    IBlockState oldState = world.getBlockState(origin);
-    world.notifyBlockUpdate(origin, oldState, oldState, 3);
     template.addBlocksToWorld(world, origin, new OptionalExternalBlockProcessor(templateId, origin, settings), settings,
         2);
   }
@@ -139,7 +140,7 @@ public final class StructureGenerationHelper {
       }
       pos.setY(pos.getY() - 1);
     }
-    return pos.getY() - 1;
+    return (foundAirPocket && isSolid(world, pos)) ? pos.getY() - 1 : -1;
   }
 
   private static boolean isSolid(World world, BlockPos pos) {

@@ -59,6 +59,10 @@ public class SurfaceTemplateStructure extends TemplateStructureFeature {
 
     @Override
     protected BlockPos findOrigin(Random random, int chunkX, int chunkZ, World world) {
-        return findSurfaceOrigin(random, chunkX, chunkZ, world, netherStyle).add(0, yOffset, 0);
+        BlockPos surface = findSurfaceOrigin(random, chunkX, chunkZ, world, netherStyle);
+        if (surface == null) {
+            return null;
+        }
+        return surface.add(0, yOffset, 0);
     }
 }

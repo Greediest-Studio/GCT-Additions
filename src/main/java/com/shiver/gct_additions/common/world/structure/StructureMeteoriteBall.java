@@ -14,6 +14,9 @@ public class StructureMeteoriteBall extends TemplateStructureFeature {
         int x = StructureGenerationHelper.randomChunkX(random, chunkX);
         int z = StructureGenerationHelper.randomChunkZ(random, chunkZ);
         int surfaceY = StructureGenerationHelper.findSurfaceY(world, x, z, false);
+        if (surfaceY < 0) {
+            return null;
+        }
         int y = Math.abs(random.nextInt(Math.max(1, surfaceY)) - 24);
         return new BlockPos(x, y, z);
     }

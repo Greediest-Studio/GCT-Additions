@@ -44,8 +44,10 @@ import net.minecraft.world.WorldServer;
 import net.minecraft.world.biome.Biome;
 import net.minecraft.world.biome.BiomeCache;
 import net.minecraft.world.biome.BiomeProvider;
+import net.minecraft.world.biome.BiomeProviderSingle;
 import net.minecraft.world.chunk.Chunk;
 import net.minecraft.world.chunk.ChunkPrimer;
+import net.minecraft.world.chunk.storage.ExtendedBlockStorage;
 import net.minecraft.world.gen.IChunkGenerator;
 import net.minecraft.world.gen.NoiseGeneratorOctaves;
 import net.minecraft.world.gen.NoiseGeneratorPerlin;
@@ -83,9 +85,9 @@ public static void registerDimension() {
   }
 public static class WorldProviderMod extends WorldProvider {
     public void init() {
-      this.biomeProvider = new WorldEverheaven.BiomeProviderCustom(this.world.getSeed());
+      this.biomeProvider = new BiomeProviderSingle(BiomeEverheavenWaste.biome);
       this.nether = false;
-      this.hasSkyLight = true;
+      this.hasSkyLight = false;
     }
 
     public void calculateInitialWeather() {}
@@ -303,6 +305,10 @@ public static class WorldProviderMod extends WorldProvider {
           }
         }
       }
+      this.destinationCoordinateCache.put(
+          ChunkPos.asLong(j, l),
+          new Teleporter.PortalPosition(new BlockPos(i6, k2, k6), this.world.getTotalWorldTime())
+      );
       return true;
     }
 
@@ -352,19 +358,47 @@ public static class WorldProviderMod extends WorldProvider {
         flag = false;
       } else {
         BlockPos blockpos3 = new BlockPos(entityIn);
-        for (int i1 = -PORTAL_SEARCH_RADIUS; i1 <= PORTAL_SEARCH_RADIUS; i1++) {
-          for (int j1 = -PORTAL_SEARCH_RADIUS; j1 <= PORTAL_SEARCH_RADIUS; j1++) {
-            BlockPos blockpos1 = blockpos3.add(i1, this.world.getActualHeight() - 1 - blockpos3.getY(), j1);
-            for (; blockpos1.getY() >= 0; blockpos1 = blockpos1.down()) {
-              BlockPos blockpos2 = blockpos1.down();
-              if (this.world.getBlockState(blockpos1).getBlock() == WorldEverheaven.portal) {
-                for (blockpos2 = blockpos1.down(); this.world.getBlockState(blockpos2).getBlock() == WorldEverheaven.portal;
-                  blockpos2 = blockpos2.down())
-                  blockpos1 = blockpos2;
-                double d1 = blockpos1.distanceSq((Vec3i)blockpos3);
-                if (d0 < 0.0D || d1 < d0) {
-                  d0 = d1;
-                  blockpos = blockpos1;
+        int minChunkX = (j - PORTAL_SEARCH_RADIUS) >> 4;
+        int maxChunkX = (j + PORTAL_SEARCH_RADIUS) >> 4;
+        int minChunkZ = (k - PORTAL_SEARCH_RADIUS) >> 4;
+        int maxChunkZ = (k + PORTAL_SEARCH_RADIUS) >> 4;
+
+        BlockPos.MutableBlockPos mpos = new BlockPos.MutableBlockPos();
+        for (int cx = minChunkX; cx <= maxChunkX; cx++) {
+          for (int cz = minChunkZ; cz <= maxChunkZ; cz++) {
+            if (!this.world.getChunkProvider().chunkExists(cx, cz)) {
+              continue;
+            }
+            Chunk chunk = this.world.getChunk(cx, cz);
+            ExtendedBlockStorage[] storage = chunk.getBlockStorageArray();
+            int startX = Math.max(j - PORTAL_SEARCH_RADIUS, cx << 4);
+            int endX = Math.min(j + PORTAL_SEARCH_RADIUS, (cx << 4) + 15);
+            int startZ = Math.max(k - PORTAL_SEARCH_RADIUS, cz << 4);
+            int endZ = Math.min(k + PORTAL_SEARCH_RADIUS, (cz << 4) + 15);
+
+            for (int bx = startX; bx <= endX; bx++) {
+              for (int bz = startZ; bz <= endZ; bz++) {
+                for (int sec = storage.length - 1; sec >= 0; sec--) {
+                  if (storage[sec] == Chunk.NULL_BLOCK_STORAGE) {
+                    continue;
+                  }
+                  int topY = (sec << 4) + 15;
+                  int botY = sec << 4;
+                  for (int by = topY; by >= botY; by--) {
+                    mpos.setPos(bx, by, bz);
+                    if (chunk.getBlockState(mpos).getBlock() == WorldEverheaven.portal) {
+                      while (by > 0 && chunk.getBlockState(bx, by - 1, bz).getBlock() == WorldEverheaven.portal) {
+                        by--;
+                      }
+                      BlockPos portalBottom = new BlockPos(bx, by, bz);
+                      double dist = portalBottom.distanceSq(blockpos3);
+                      if (d0 < 0.0D || dist < d0) {
+                        d0 = dist;
+                        blockpos = portalBottom;
+                      }
+                      break;
+                    }
+                  }
                 }
               }
             }
@@ -410,10 +444,6 @@ public static class WorldProviderMod extends WorldProvider {
         entityIn.motionZ = d3 * f2 + d4 * f1;
         entityIn
           .rotationYaw = rotationYaw - (this.teleportDirection.getOpposite().getHorizontalIndex() * 90) + (blockpattern$patternhelper.getForwards().getHorizontalIndex() * 90);
-        BlockPos safePos = TeleporterDirect.findSafeTeleportPos(this.world, new BlockPos(d5, d6, d7));
-        d5 = safePos.getX() + 0.5D;
-        d6 = safePos.getY();
-        d7 = safePos.getZ() + 0.5D;
         entityIn.motionX = 0.0D;
         entityIn.motionY = 0.0D;
         entityIn.motionZ = 0.0D;
@@ -741,7 +771,7 @@ public static class WorldProviderMod extends WorldProvider {
       byte[] abyte = chunk.getBiomeArray();
       for (int i = 0; i < abyte.length; i++)
         abyte[i] = (byte)Biome.getIdForBiome(this.biomesForGeneration[i]);
-      chunk.generateSkylightMap();
+      chunk.resetRelightChecks();
       return chunk;
     }
 

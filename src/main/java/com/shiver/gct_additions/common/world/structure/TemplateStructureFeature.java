@@ -123,10 +123,14 @@ public abstract class TemplateStructureFeature implements StructureFeature {
         return world.isAreaLoaded(new BlockPos(chunkX, 0, chunkZ), new BlockPos(chunkX + 15, 255, chunkZ + 15), false);
     }
 
+    @Nullable
     protected BlockPos findSurfaceOrigin(Random random, int chunkX, int chunkZ, World world, boolean netherStyle) {
         int x = StructureGenerationHelper.randomChunkX(random, chunkX);
         int z = StructureGenerationHelper.randomChunkZ(random, chunkZ);
         int y = StructureGenerationHelper.findSurfaceY(world, x, z, netherStyle);
+        if (y < 0) {
+            return null;
+        }
         return new BlockPos(x, y, z);
     }
 

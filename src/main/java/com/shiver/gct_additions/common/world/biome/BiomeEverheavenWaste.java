@@ -34,11 +34,11 @@ public class BiomeEverheavenWaste extends Biome {
     this.spawnableCreatureList.clear();
     this.spawnableWaterCreatureList.clear();
     this.spawnableCaveCreatureList.clear();
-    this.spawnableCreatureList.add(new Biome.SpawnListEntry(EntityBthdz.BthdzEntity.class, 10, 1, 4));
-    this.spawnableCreatureList.add(new Biome.SpawnListEntry(EntityBninz.BninzEntity.class, 10, 1, 2));
-    this.spawnableCreatureList.add(new Biome.SpawnListEntry(EntityBligtz.BligtzEntity.class, 10, 1, 2));
-    this.spawnableCreatureList.add(new Biome.SpawnListEntry(EntityBnatuz.BnatuzEntity.class, 10, 1, 2));
-    this.spawnableCreatureList.add(new Biome.SpawnListEntry(EntityZombie.class, 20, 1, 2));
+    this.spawnableMonsterList.add(new Biome.SpawnListEntry(EntityBthdz.BthdzEntity.class, 10, 1, 4));
+    this.spawnableMonsterList.add(new Biome.SpawnListEntry(EntityBninz.BninzEntity.class, 10, 1, 2));
+    this.spawnableMonsterList.add(new Biome.SpawnListEntry(EntityBligtz.BligtzEntity.class, 10, 1, 2));
+    this.spawnableMonsterList.add(new Biome.SpawnListEntry(EntityBnatuz.BnatuzEntity.class, 10, 1, 2));
+    this.spawnableMonsterList.add(new Biome.SpawnListEntry(EntityZombie.class, 20, 1, 2));
   }
 
   @SideOnly(Side.CLIENT)
