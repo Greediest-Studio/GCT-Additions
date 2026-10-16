@@ -8,4 +8,9 @@ public class BlockSenterianCase4 extends BlockSenterianCase {
     public BlockSenterianCase4() {
         super("senterian_case_4");
     }
+
+    @Override
+    protected String getDroppedItemId() {
+        return "journey:lament_deconstructor_depths";
+    }
 }
