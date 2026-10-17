@@ -30,8 +30,8 @@ public class ItemCreepyWitherstormDoll extends Item {
     @Override
     public void addInformation(ItemStack stack, World world, List<String> tooltip, ITooltipFlag flag) {
         super.addInformation(stack, world, tooltip, flag);
-        tooltip.add("也挺可爱的……");
-        tooltip.add("它失去了传送的能力，不过可以召唤凋灵风暴！");
+        tooltip.add("§f也挺可爱的……");
+        tooltip.add("§e它失去了传送的能力，不过可以召唤凋灵风暴！");
     }
 
     @Override

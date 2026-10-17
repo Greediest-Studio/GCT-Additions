@@ -67,14 +67,14 @@ public final class GctAdditionsItems {
 
     public static final Item ELF_PASSES = info("elf_passes", 64, 0, "§e右键精灵可以得到自然结晶碎片", true);
 
-    public static final Item ORDER_CRYSTAL = info("order_crystal", 64, 0, "秩序，蕴含于这一方小小水晶中", true);
+    public static final Item ORDER_CRYSTAL = info("order_crystal", 64, 0, "§f秩序，蕴含于这一方小小水晶中", true);
     public static final Item ORDERED_CORE = info("ordered_core", 64, 0, null, true);
-    public static final Item DOOR_KEY_EMPTY = info("door_key_empty", 1, 0, "可以在深渊仪式上绑定对应门钥匙！", false);
+    public static final Item DOOR_KEY_EMPTY = info("door_key_empty", 1, 0, "§f可以在深渊仪式上绑定对应门钥匙！", false);
 
-    public static final Item SENTERIAN_KEY = info("senterian_key", 64, 0, "用于打开黑岩之锁", false);
+    public static final Item SENTERIAN_KEY = info("senterian_key", 64, 0, "§f用于打开黑岩之锁", false);
 
     public static final Item SANITE_SIPHON = info("sanite_siphon", 1, 100, "§c用于采集修格斯软泥", false);
-    public static final Item SANITY_OBSERVER = info("sanity_observer", 1, 0, "探测当前San值", false);
+    public static final Item SANITY_OBSERVER = info("sanity_observer", 1, 0, "§7探测当前San值", false);
 
     public static void registerItems(RegistryEvent.Register<Item> event) {
         event.getRegistry().registerAll(

@@ -31,8 +31,8 @@ public class ItemDoorKeyOfOrderland extends Item {
     @Override
     public void addInformation(ItemStack stack, World world, List<String> tooltip, ITooltipFlag flag) {
         super.addInformation(stack, world, tooltip, flag);
-        tooltip.add("右键生成一个秩序之地传送门！");
-        tooltip.add("只有击败了凋灵风暴的人才有资格进入秩序之地……");
+        tooltip.add("§f右键生成一个秩序之地传送门！");
+        tooltip.add("§f只有击败了凋灵风暴的人才有资格进入秩序之地……");
     }
 
     @Override
