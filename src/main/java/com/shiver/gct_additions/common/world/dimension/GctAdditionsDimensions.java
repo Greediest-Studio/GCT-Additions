@@ -7,6 +7,7 @@ import com.shiver.gct_additions.common.blocks.BlockBesideVoidPortal2;
 import com.shiver.gct_additions.common.blocks.BlockBesideVoidPortal3;
 import com.shiver.gct_additions.misc.GctAdditionsCreativeTab;
 import com.shiver.gct_additions.common.items.PortalActivatorItem;
+import com.shiver.gct_additions.common.items.AtlantisActivatorItem;
 import com.shiver.gct_additions.common.items.EverheavenActivatorItem;
 import com.shiver.gct_additions.common.world.structure.GctAdditionsStructureTemplates;
 import net.minecraft.block.Block;
@@ -44,8 +45,7 @@ public final class GctAdditionsDimensions {
     public static final Item EVERHEAVEN = new EverheavenActivatorItem();
     public static final Item ALFHEIM = new PortalActivatorItem("alfheim", GctAdditionsCreativeTab.TAB,
             WorldAlfheim.portal, () -> WorldAlfheim.DIMID);
-    public static final Item ATLANTIS = new PortalActivatorItem("atlantis", GctAdditionsCreativeTab.TAB,
-            WorldAtlantis.portal, () -> WorldAtlantis.DIMID);
+    public static final Item ATLANTIS = new AtlantisActivatorItem();
     public static final Item STARLAND = new PortalActivatorItem("starland", GctAdditionsCreativeTab.TAB,
             BlockAstralPortalCore.block, () -> WorldStarland.DIMID, 1,
             (world, origin, widthDir) -> world.setBlockState(origin, BlockAstralPortalCore.block.getDefaultState(), 3));
