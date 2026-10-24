@@ -90,6 +90,14 @@ public final class GctAdditionsEntityRegistry {
                 "elf", nextEntityId++, 64, 3, true, -1, -1);
         register(event, EntityReversedElf.ReversedElfEntity.class,
                 "reversed_elf", nextEntityId++, 64, 3, true, -11534229, -5273345);
+        if (net.minecraftforge.fml.common.Loader.isModLoaded("draconicevolution")) {
+            registerProjectile(event, com.shiver.gct_additions.common.entity.EntityOrderGuardian.class,
+                    "order_guardian", nextEntityId++, 256, 3, true);
+        }
+        if (net.minecraftforge.fml.common.Loader.isModLoaded("abyssalcraft")) {
+            register(event, com.shiver.gct_additions.common.entity.EntityActiveShoggoth.class,
+                    "active_shoggoth", nextEntityId++, 128, 3, true, -16777216, -16711681);
+        }
     }
 
     private static void register(RegistryEvent.Register<EntityEntry> event, Class<? extends Entity> entityClass,

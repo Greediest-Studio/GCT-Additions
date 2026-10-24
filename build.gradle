@@ -69,6 +69,15 @@ java {
     }
 }
 
+// Include compile-time stubs so mixins and classes can reference types from optional mods
+sourceSets {
+    main {
+        java {
+            srcDirs += 'src/stubs/java'
+        }
+    }
+}
+
 configurations {
     mixinAgent {
         canBeConsumed = false
@@ -253,6 +262,14 @@ jar {
             attribute_map['MixinConnector'] = mixinConnectorClass
         }
         attributes(attribute_map)
+    }
+    // Exclude compile-time stubs from the final jar
+    exclude 'com/wdcftgg/**'
+}
+
+if (propertyBool('generate_sources_jar')) {
+    tasks.named('sourcesJar').configure {
+        exclude 'com/wdcftgg/**'
     }
 }
 

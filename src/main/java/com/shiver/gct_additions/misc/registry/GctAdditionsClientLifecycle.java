@@ -15,6 +15,7 @@ public final class GctAdditionsClientLifecycle {
     public static void preInit(FMLPreInitializationEvent event, String modId) {
         OBJLoader.INSTANCE.addDomain(modId);
         GctAdditionsEntities.registerRenderers(event);
+        com.shiver.gct_additions.client.ReplacementEntityRenderers.register();
     }
 
     public static void init(FMLInitializationEvent event) {

@@ -14,7 +14,7 @@ import org.apache.logging.log4j.Logger;
     modid = Tags.MOD_ID,
     name = Tags.MOD_NAME,
     version = Tags.VERSION,
-    dependencies = "required-after:gamestages;required-after:bookshelf;after:abyssalcraft"
+    dependencies = "required-after:gamestages;required-after:bookshelf;after:abyssalcraft;after:draconicevolution"
 )
 public class GctAdditions {
     public static final Logger LOGGER = LogManager.getLogger(Tags.MOD_NAME);

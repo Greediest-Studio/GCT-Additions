@@ -3,8 +3,8 @@ package com.shiver.gct_additions.common.items;
 
 import java.util.List;
 
-import com.shiver.gct_additions.misc.GctAdditionsCreativeTab;
 import com.shiver.gct_additions.common.events.CreepyWitherstormDollClick;
+import com.shiver.gct_additions.misc.GctAdditionsCreativeTab;
 
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.entity.player.EntityPlayer;
@@ -14,6 +14,7 @@ import net.minecraft.util.ActionResult;
 import net.minecraft.util.EnumActionResult;
 import net.minecraft.util.EnumHand;
 import net.minecraft.world.World;
+import net.minecraftforge.fml.common.Loader;
 
 public class ItemCreepyWitherstormDoll extends Item {
     public static final Item block = new ItemCreepyWitherstormDoll();
@@ -36,7 +37,10 @@ public class ItemCreepyWitherstormDoll extends Item {
 
     @Override
     public ActionResult<ItemStack> onItemRightClick(World world, EntityPlayer player, EnumHand hand) {
-        CreepyWitherstormDollClick.run(player, world, (int) player.posX, (int) player.posY, (int) player.posZ);
-        return new ActionResult<>(EnumActionResult.SUCCESS, player.getHeldItem(hand));
+        ItemStack doll = player.getHeldItem(hand);
+        if (!Loader.isModLoaded("witherstormmod")) return new ActionResult<>(EnumActionResult.FAIL, doll);
+        boolean summoned = CreepyWitherstormDollClick.summon(player, world, doll);
+        return new ActionResult<>(summoned ? EnumActionResult.SUCCESS : EnumActionResult.FAIL, doll);
     }
+
 }

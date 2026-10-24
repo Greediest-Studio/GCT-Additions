@@ -640,3 +640,5 @@ item.tonitruium_dust.name=Tonitruium Dust
 item.wavite_ingot.name=Wavite Ingot
 item.witheric_core.name=Witheric Core
 item.yogsothothium_ingot.name=Yogsothothium Ingot
+entity.order_guardian.name=Order Guardian
+entity.active_shoggoth.name=Active Lesser Shoggoth

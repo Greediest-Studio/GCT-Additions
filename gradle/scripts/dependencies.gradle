@@ -77,6 +77,8 @@ dependencies {
     implementation rfg.deobf("curse.maven:bookshelf-228525:2836960")
     implementation rfg.deobf("curse.maven:gamestage-268655:2951840")
     compileOnly rfg.deobf("curse.maven:AbyssalCraft-53686:6922627")
+    compileOnly rfg.deobf("curse.maven:draconic-evolution-223565:3431261")
+    compileOnly rfg.deobf("curse.maven:brandons-core-231382:3408276")
 }
 
 // Need reobfJar to use uber jars, so dependencies that are shaded in are present
