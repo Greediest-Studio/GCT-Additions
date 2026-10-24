@@ -3,6 +3,7 @@ package com.shiver.gct_additions.common.events;
 import com.shiver.gct_additions.common.world.dimension.WorldTheVoid;
 import com.wdcftgg.witherstormmod.common.entity.WitherStormEntity;
 import net.darkhax.gamestages.GameStageHelper;
+import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.text.TextComponentString;
@@ -21,7 +22,7 @@ public final class CreepyWitherstormDollClick {
             return false;
         }
         WitherStormEntity storm = new WitherStormEntity(world);
-        storm.setLocationAndAngles(player.posX, player.posY + 5.0D, player.posZ, player.rotationYaw, 0.0F);
+        ((Entity) storm).setLocationAndAngles(player.posX, player.posY + 5.0D, player.posZ, player.rotationYaw, 0.0F);
         storm.makeInvulnerable();
         if (!world.spawnEntity(storm)) {
             return false;
