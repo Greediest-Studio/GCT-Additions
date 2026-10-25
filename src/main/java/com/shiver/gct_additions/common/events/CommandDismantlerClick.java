@@ -41,7 +41,7 @@ public final class CommandDismantlerClick
             }
         }
         else {
-            if (entity instanceof EntityPlayer) {
+            if (entity instanceof EntityPlayer && !world.isRemote) {
                 ((EntityPlayer) entity).sendMessage(new TextComponentString("该方块无法拆除！"));
             }
         }
