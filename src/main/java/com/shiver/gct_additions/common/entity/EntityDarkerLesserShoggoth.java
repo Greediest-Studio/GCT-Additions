@@ -6,10 +6,7 @@ import com.shiver.gct_additions.common.items.ItemShoggothTancale;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.model.ModelBase;
 import net.minecraft.client.model.ModelRenderer;
-import net.minecraft.client.renderer.RenderItem;
-import net.minecraft.client.renderer.entity.Render;
 import net.minecraft.client.renderer.entity.RenderLiving;
-import net.minecraft.client.renderer.entity.RenderManager;
 import net.minecraft.client.renderer.entity.RenderSnowball;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityCreature;
@@ -42,6 +39,7 @@ import net.minecraft.util.EnumParticleTypes;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.SoundEvent;
 import net.minecraft.util.math.MathHelper;
+import net.minecraft.util.math.RayTraceResult;
 import net.minecraft.world.World;
 import net.minecraft.world.biome.Biome;
 import net.minecraftforge.fml.client.registry.RenderingRegistry;
@@ -200,6 +198,20 @@ public final class EntityDarkerLesserShoggoth {
 
     public DarkerLesserShoggothProjectileEntity(World worldIn, EntityLivingBase shooter) {
       super(worldIn, shooter);
+    }
+
+    @Override
+    protected void onHit(RayTraceResult raytraceResultIn) {
+      super.onHit(raytraceResultIn);
+      this.setDead();
+    }
+
+    @Override
+    public void onUpdate() {
+      super.onUpdate();
+      if (this.inGround) {
+        this.setDead();
+      }
     }
   }
 

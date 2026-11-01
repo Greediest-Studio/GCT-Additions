@@ -11,10 +11,7 @@ import net.minecraft.block.state.IBlockState;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.model.ModelBase;
 import net.minecraft.client.model.ModelRenderer;
-import net.minecraft.client.renderer.RenderItem;
-import net.minecraft.client.renderer.entity.Render;
 import net.minecraft.client.renderer.entity.RenderLiving;
-import net.minecraft.client.renderer.entity.RenderManager;
 import net.minecraft.client.renderer.entity.RenderSnowball;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityCreature;
@@ -44,6 +41,7 @@ import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.SoundEvent;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.MathHelper;
+import net.minecraft.util.math.RayTraceResult;
 import net.minecraft.util.math.Vec3d;
 import net.minecraft.util.registry.RegistryNamespaced;
 import net.minecraft.world.World;
@@ -231,6 +229,20 @@ public final class EntityBligtz {
 
     public BligtzProjectileEntity(World worldIn, EntityLivingBase shooter) {
       super(worldIn, shooter);
+    }
+
+    @Override
+    protected void onHit(RayTraceResult raytraceResultIn) {
+      super.onHit(raytraceResultIn);
+      this.setDead();
+    }
+
+    @Override
+    public void onUpdate() {
+      super.onUpdate();
+      if (this.inGround) {
+        this.setDead();
+      }
     }
   }
 
