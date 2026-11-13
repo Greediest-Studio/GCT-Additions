@@ -86,16 +86,20 @@ public final class StructureGenerationHelper {
 
   public static boolean placeTemplate(World world, ResourceLocation templateId, BlockPos origin, Rotation rotation,
       Mirror mirror) {
-    return placeTemplate(world, templateId, origin, rotation, mirror, false);
+    return placeTemplate(world, templateId, origin, rotation, mirror, false, false);
   }
 
   static boolean placeTemplateDuringWorldgen(World world, StructureTemplateId templateId, BlockPos origin,
       Rotation rotation, Mirror mirror) {
-    return placeTemplate(world, templateId.getResourceLocation(), origin, rotation, mirror, true);
+    return placeTemplate(world, templateId.getResourceLocation(), origin, rotation, mirror, true, true);
+  }
+
+  static boolean placeTemplateDeterministic(World world, StructureTemplateId templateId, BlockPos origin) {
+    return placeTemplate(world, templateId.getResourceLocation(), origin, Rotation.NONE, Mirror.NONE, true, false);
   }
 
   private static boolean placeTemplate(World world, ResourceLocation templateId, BlockPos origin, Rotation rotation,
-      Mirror mirror, boolean requireLoadedArea) {
+      Mirror mirror, boolean requireLoadedArea, boolean checkGeneratedOverlap) {
     if (world.isRemote || !(world instanceof WorldServer) || world.getMinecraftServer() == null) {
       return false;
     }
@@ -118,7 +122,10 @@ public final class StructureGenerationHelper {
       return false;
     }
     if (requireLoadedArea) {
-      if (!world.isAreaLoaded(bounds, false) || hasGeneratedStructure(world, bounds)) {
+      if (!world.isAreaLoaded(bounds, false)) {
+        return false;
+      }
+      if (checkGeneratedOverlap && hasGeneratedStructure(world, bounds)) {
         return false;
       }
     }
@@ -240,7 +247,9 @@ public final class StructureGenerationHelper {
   }
 
   private static boolean hasGeneratedStructure(World world, StructureBoundingBox bounds) {
-    return GeneratedStructureData.get(world).intersects(expand(bounds, 8));
+    StructureBoundingBox expanded = expand(bounds, 8);
+    return GeneratedStructureData.get(world).intersects(expanded)
+        || StructureSeekAltarStructure.reservesBounds(world, expanded);
   }
 
   private static StructureBoundingBox expand(StructureBoundingBox bounds, int distance) {

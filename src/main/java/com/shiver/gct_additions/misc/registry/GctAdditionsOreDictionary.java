@@ -11,6 +11,7 @@ import net.minecraftforge.oredict.OreDictionary;
 
 public final class GctAdditionsOreDictionary {
     private static final List<Entry> ENTRIES = Arrays.asList(
+            entry("tinyNuggetPlasmarite", "tinyplasmariumdust"),
             entry("oreSanite", "sanite_ore"),
             entry("oreEthaxium", "ethauxium_ore"),
             entry("oreDreadium", "dreadium_ore"),

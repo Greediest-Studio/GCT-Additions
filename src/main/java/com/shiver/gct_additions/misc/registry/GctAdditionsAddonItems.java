@@ -115,6 +115,7 @@ public final class GctAdditionsAddonItems {
     public static final Item PHOTOVOLTAIC_CELL_XI = simple("photovoltaic_cell_xi");
     public static final Item PHOTOVOLTAIC_CELL_XII = simple("photovoltaic_cell_xii");
     public static final Item PLASMARITE_NUGGET = simple("plasmarite_nugget");
+    public static final Item TINY_PLASMARIUM_DUST = simple("tinyplasmariumdust");
     public static final Item REDITRITE_DUST = simple("reditrite_dust");
     public static final Item REDITRITE_GEAR = simple("reditrite_gear");
     public static final Item REDITRITE_INGOT = simple("reditrite_ingot");
@@ -284,6 +285,7 @@ public final class GctAdditionsAddonItems {
             PHOTOVOLTAIC_CELL_XI,
             PHOTOVOLTAIC_CELL_XII,
             PLASMARITE_NUGGET,
+            TINY_PLASMARIUM_DUST,
             REDITRITE_DUST,
             REDITRITE_GEAR,
             REDITRITE_INGOT,

@@ -3,6 +3,7 @@ package com.shiver.gct_additions.misc.registry;
 import com.shiver.gct_additions.common.entity.GctAdditionsEntities;
 import com.shiver.gct_additions.client.gui.overlay.OverlayBlueScreenOverlay;
 import com.shiver.gct_additions.client.gui.overlay.OverlaySanityRender;
+import com.shiver.gct_additions.client.gui.overlay.OverlayTconState;
 import net.minecraftforge.client.model.obj.OBJLoader;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
@@ -21,5 +22,6 @@ public final class GctAdditionsClientLifecycle {
     public static void init(FMLInitializationEvent event) {
         MinecraftForge.EVENT_BUS.register(new OverlaySanityRender.SanityOverlayRenderer());
         MinecraftForge.EVENT_BUS.register(new OverlayBlueScreenOverlay.BlueScreenOverlayRenderer());
+        MinecraftForge.EVENT_BUS.register(new OverlayTconState());
     }
 }
